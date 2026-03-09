@@ -10,7 +10,7 @@ Installationsdokumentation der einzelnen Produkte, sondern konzentriert sich auf
 Projektbetrieb notwendigen Schritte.
 
 
-## 3.1.1   Installation von Python
+## Installation von Python
 
 Für die Ausführung der Python-Skripte ist eine lokale Python-Installation erforderlich, sofern noch nicht vorhanden.
 
@@ -36,13 +36,13 @@ Das Installieren der benötigten Bibliotheken geschieht mit der Eingabeaufforder
  pip install pandas geopandas shapely matplotlib
  ```
 
-## 3.1.2 Installation von SQLite
+## Installation von SQLite
 
 SQLite dient als Datenbanksystem für die persistente Speicherung der Projekt­daten. Da SQLite
 serverlos arbeitet, ist keine klassische Installation im Sinne eines Datenbankservers
 erforderlich.
 
-1. Die vorkompilierten SQLite-Binärdateien können von der 
+1. Die vorkompilierten SQLite-Dateien können von der 
    [offiziellen Projektseite](https://www.sqlite.org/download.html) heruntergeladen
    werden. Für Windows wird das Paket *Precompiled Binaries for Windows* benötigt.
 
@@ -52,7 +52,7 @@ erforderlich.
 3. Optional kann das Verzeichnis, dem Systempfad *PATH* hinzugefügt
    werden, um SQLite direkt über die Eingabeaufforderung verwenden zu können.
 
-4. Falls Schritt 3 ausgeführt wurde, kann über die Eingabeaufforderung die Installation mithilfe des foglenden Befehels überprüft werden:
+4. Falls Schritt 3 ausgeführt wurde, kann über die Eingabeaufforderung die Installation mithilfe des folgenden Befehls überprüft werden:
 
    ```console
    sqlite3 --version
@@ -62,7 +62,7 @@ Wird, wie nach der Installation von Python, eine Versionsnummer ausgegeben, ist 
 Python-Anwendungen ist der direkte Aufruf von SQLite mithilfe der Eingabeaufforderung nicht zwingend erforderlich, da der
 Zugriff auf die Datenbank über das systemeigene Python-Modul sqlite3 erfolgt.
 
-## 3.1.3   Installation von SpatiaLite
+## Installation von SpatiaLite
 
 Zur Verarbeitung räumlicher Daten wird die Erweiterung SpatiaLite benötigt. Diese ergänzt
 SQLite um Funktionen zur Speicherung, Analyse und Abfrage von Geodaten.
@@ -108,12 +108,12 @@ C:\Spatialite.
 
    hat die Versionsnummer *5.1.0* zurückgegeben, damit ist die Installation erfolgreich.
 
-### 3.1.4   Installation von DB Browser for SQLite (optional)
+## Installation von DB Browser for SQLite
 
 Der Einsatz von **DB Browser for SQLite** ist nicht zwingend erforderlich,
-da der Zugriff auf die Datenbank vollständig über Python und SQL erfolgt. Das Werkzeug kann jedoch
+da der Zugriff auf die Datenbank vollständig über Python oder die Eingabeaufforderung erfolgen kann. Das Werkzeug wird jedoch
 als unterstützendes Hilfsmittel zur manuellen Inspektion der Datenbank, zur Kontrolle der
-Tabellenstruktur sowie zur Ausführung einzelner SQL-Abfragen genutzt werden.
+Tabellenstruktur sowie zur Ausführung einzelner SQL-Abfragen empfohlen.
 
 DB Browser for SQLite kann von der [offiziellen Projektseite](https://sqlitebrowser.org/) heruntergeladen werden. Es stehen zwei Version zur Verfügung. Zum einen *DB Browser for SQLite - Standard installer* für die Nutzung eines grafischen Installers, wie man es herkommlicherweise von Windows-Anwednungen kennt. Zum anderen *DB Browser for SQLite - . zip (no installer)*, für welche die Installation, wie bei SQLite und SpatiaLite vorgenommen wird.
 

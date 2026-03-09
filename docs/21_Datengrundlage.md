@@ -1,6 +1,6 @@
 [zurück zur Startseite](../README.md)
 
-## 2.1 Datengrundlage
+# 2.1 Datengrundlage
 
 Als fachlicher Ausgangspunkt dient eine relationale Datenbank, die im Rahmen des Mastermoduls Datenbanktechnologien (Studiengang Geoinformatik/Management) entwickelt und zu Übungszwecken eingesetzt wurde. Die Verwaltung und Analyse der Daten erfolgte in Microsoft SQL Server Management Studio (MS SSMS).
 

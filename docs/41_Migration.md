@@ -1,6 +1,6 @@
 [zurück zur Startseite](../README.md)
 
-## 4.1 Datenbankmigration
+# 4.1 Datenbankmigration
 
 Im Rahmen der Implementierung wird die bestehende MS-SQL-Server-Datenbank in eine SQLite-basierte Umgebung überführt. Ziel der Migration ist es, eine funktional vergleichbare Datenstruktur in SQLite herzustellen, die anschließend als Datengrundlage für die Python-basierte Auswertung genutzt werden kann.
 
@@ -11,11 +11,11 @@ Für diese beiden Schritte werden unterschiedliche Werkzeuge eingesetzt:
 - **DB Browser for SQLite** zur Erstellung des Datenbankschemas  
 - **Feature Manipulation Engine (FME)** zur Übertragung der Tabelleninhalte
 
-Da Microsoft SQL Server und SQLite unterschiedliche SQL-Dialekte verwenden, ist ein direkter Import des bestehenden Datenbankschemas – beispielsweise über eine SQL-Datei – nicht ohne Weiteres möglich. Aus diesem Grund wird das Schema manuell in SQLite nachgebildet, wobei Tabellenstruktur, Primärschlüssel und Fremdschlüssel der ursprünglichen Datenbank übernommen werden.
+Microsoft SQL Server und SQLite verwenden unterschiedliche SQL-Dialekte, daher ist ein direkter Import des bestehenden Datenbankschemas – beispielsweise über eine SQL-Datei – nicht ohne Weiteres möglich. Aus diesem Grund wird das Schema manuell in SQLite nachgebildet, wobei Tabellenstruktur, Primärschlüssel und Fremdschlüssel der ursprünglichen Datenbank übernommen werden.
 
 Für die Übertragung der Datensätze wird die **Feature Manipulation Engine (FME)** eingesetzt. FME ist ein Werkzeug zur Transformation und Migration von Daten zwischen unterschiedlichen Datenformaten und Datenbanksystemen und wird insbesondere im Umgang mit räumlichen Daten häufig verwendet. Neben der technischen Eignung waren auch die Verfügbarkeit der Software in den Laboreinrichtungen der GI-Fakultät sowie vorhandene Vorkenntnisse im Umgang mit dem FME ausschlaggebend für dessen Einsatz.
 
-## 4.1.1 Erstellung des Datenbankschemas mit DB Browser for SQLite
+## Erstellung des Datenbankschemas mit DB Browser for SQLite
 
 Im **DB Browser for SQLite** wird zunächst eine neue Datenbank angelegt. Anschließend wird das Datenbankschema durch das Anlegen der Tabellen sowie die Definition von Schlüsselattributen und Constraints aufgebaut. Die Datenbank trägt – analog zu ihrem Gegenstück im MS SQL Server – den Namen *gm23s87650.db*.
 
@@ -56,7 +56,7 @@ Die Zuordnung erfolgt im vorliegenden Projekt wie folgt:
 
 Räumliche Daten werden dabei aus der ursprünglichen SQL-Server-Geometriedarstellung in das von SpatiaLite verwendete BLOB-Format überführt. Dieses baut auf dem WKB-Format auf, erweitert dieses jedoch um einen zusätzlichen Header, welcher das jeweilige Objekt mit Metadaten ausstattet.
 
-## 4.1.2 Übertragung der Tabelleninhalte mit FME
+## Übertragung der Tabelleninhalte mit FME
 
 Die Übertragung der Datensätze aus der MS-SQL-Server-Datenbank in die SQLite-Datenbank erfolgt mithilfe von FME. Hierzu wird zunächst eine Verbindung zur Referenzdatenbank hergestellt und anschließend eine Verbindung zur zuvor erstellten SQLite-Datenbank konfiguriert.
 
@@ -83,8 +83,6 @@ Zunächst wird in FME ein neuer **Reader** hinzugefügt, der als Datenquelle fü
 
 Nach der Bestätigung der Einstellungen erzeugt FME für jede ausgewählte Tabelle ein entsprechendes Reader-Objekt im Arbeitsbereich.
 
----
-
 ### Schritt 2: Writer konfigurieren
 
 Im nächsten Schritt wird ein **Writer** eingerichtet, der als Ziel der Datenübertragung dient.
@@ -98,8 +96,6 @@ Im nächsten Schritt wird ein **Writer** eingerichtet, der als Ziel der Datenüb
 - Im Parameter *Dataset* wird der Pfad zur zuvor erstellten Datenbankdatei `gm23s87650.db` angegeben.
 
 Nach der Bestätigung der Einstellungen erscheint für jede Tabelle ein entsprechendes Writer-Objekt im Arbeitsbereich.
-
----
 
 ### Schritt 3: Reader und Writer verbinden
 
@@ -115,8 +111,6 @@ Anschließend werden die Reader- und Writer-Komponenten miteinander verbunden.
 
 Dieser Schritt wird für alle zu migrierenden Tabellen wiederholt.
 
----
-
 ### Schritt 4: Prozess ausführen
 
 Der eigentliche Migrationsprozess wird anschließend über den **Run-Button** gestartet.
@@ -128,6 +122,8 @@ Der eigentliche Migrationsprozess wird anschließend über den **Run-Button** ge
 ![Ausführung des Prozesses](media/FME_Prozess_ausfuehren.png)
 
 Nach Abschluss des Prozesses stehen sämtliche Tabelleninhalte in der SQLite-Datenbank zur Verfügung. Diese bildet die Datengrundlage für die im folgenden Abschnitt beschriebene Python-basierte Auswertungsumgebung.
+
+---
 
 <div style="display: flex; justify-content: space-between;">
   <a href="4_Implementierung.md">◀ 4 Implementierung</a>

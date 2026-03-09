@@ -18,9 +18,9 @@ Abschließend wird ein Systementwurf vorgestellt, der die Architektur der Zielum
 
 - [2.2 Anforderungsanalyse](22_Anforderungsanalyse.md)
 
-- [2.3 Systementwurf](23_Systementwurf.md)
+- [2.3 Auswahl der Python-Bibliotheken](23_Auswahl_Python_Bibliotheken.md)
 
-- [2.4 Auswahl der Python-Bibliotheken](24_Auswahl_Python_Bibliotheken.md)
+- [2.4 Systementwurf](24_Systementwurf.md)
 
 ---
 <div style="display: flex; justify-content: space-between;">

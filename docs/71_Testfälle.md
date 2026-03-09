@@ -1,6 +1,6 @@
 [zurück zur Startseite](../README.md)
 
-## 7.2 Testfälle
+## 7.1 Testfälle
 
 Die folgenden Tabellen listen die definierten Testfälle auf. Jeder Testfall ist einer Kategorie zugeordnet und referenziert die entsprechenden Anforderungen aus der Anforderungsanalyse.
 
@@ -54,7 +54,7 @@ Die beschriebenen Testfälle bilden damit die Grundlage für die anschließende 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="71_Referenzdaten.md">◀ 7.1 Referenzdaten</a>
-  <a href="73_Testergebnisse.md">7.3 Testergebnisse
+  <a href="7_Testen_der_Software.md">◀ 7 Testen der Software</a>
+  <a href="72_Testergebnisse.md">7.2 Testergebnisse
  ▶</a>
 </div>

@@ -1,6 +1,6 @@
 [zurück zur Startseite](../README.md)
 
-# 2.3 Systementwurf
+# 2.4 Systementwurf
 
 Auf Grundlage der in Abschnitt *2.2 Anforderungsanalyse* definierten Anforderungen wird ein Systementwurf für die Architektur der Zielumgebung entwickelt. Ziel ist es, eine modulare Open-Source-Architektur zu konzipieren, die die zuvor aufgestellten funktionalen und nicht-funktionalen Anforderungen erfüllt.
 
@@ -74,5 +74,5 @@ Der dargestellte Entwurf bildet die konzeptionelle Grundlage für die in [Kapite
 ---
 <div style="display: flex; justify-content: space-between;">
   <a href="22_Anforderungsanalyse.md">◀ 2.3 Anforderungsanalyse</a>
-  <a href="24_Auswahl_Python_Bibliotheken.md">2.4 Auswahl der Python-Bibliotheken ▶</a>
+  <a href="3_System_und_Installation.md">3 Systemvoraussetzungen und Softwareinstallation ▶</a>
 </div>

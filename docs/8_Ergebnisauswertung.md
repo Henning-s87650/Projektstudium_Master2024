@@ -34,7 +34,7 @@ Diese Architektur bietet Vorteile hinsichtlich Portabilität, Offenheit und Flex
 
 ---
 <div style="display: flex; justify-content: space-between;">
-  <a href="73_Testergebnisse.md">◀ 7.3 Testergebnisse</a>
+  <a href="72_Testergebnisse.md">◀ 7.2 Testergebnisse</a>
   <a href="9_Fazit.md">9 Fazit
  ▶</a>
 </div>

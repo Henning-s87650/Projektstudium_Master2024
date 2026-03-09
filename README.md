@@ -35,7 +35,7 @@ Die Umsetzung basiert vollständig auf Open-Source-Technologien:
 
 - SQLite (dateibasiertes relationales Datenbanksystem)
 - SpatiaLite (räumliche Erweiterung für SQLite)
-- Python 3.x
+- Python 3
 - pandas
 - GeoPandas
 - Shapely
@@ -45,12 +45,12 @@ Die Umsetzung basiert vollständig auf Open-Source-Technologien:
 
 Zur Reproduktion der Ergebnisse ist erforderlich:
 
-1. Installation von Python 3.x
+1. Installation von Python 3
 2. Installation der genannten Bibliotheken
 3. Bereitstellung der SQLite-/SpatiaLite-Datenbankdatei
 4. Ausführung der jeweiligen Skripte im Ordner `src/script/`
 
-Details zur Einrichtung sind in Kapitel 3 der Dokumentation beschrieben.
+Details zur Einrichtung sind in Kapitel 5 der Dokumentation beschrieben.
 
 ## Dokumentation
 
@@ -58,8 +58,8 @@ Details zur Einrichtung sind in Kapitel 3 der Dokumentation beschrieben.
 - ### [2 Technische Grundlagen](docs/2_technische_Grundlagen.md)
     - [2.1 Datengrundlage](docs/21_Datengrundlage.md)
     - [2.2 Anforderungsanalyse](docs/22_Anforderungsanalyse.md)
-    - [2.3 Systementwurf](docs/23_Systementwurf.md)
-    - [2.4 Auswahl der Python-Bibliotheken](docs/24_Auswahl_Python_Bibliotheken.md)
+    - [2.3 Auswahl der Python-Bibliotheken](docs/23_Auswahl_Python_Bibliotheken.md)
+    - [2.4 Systementwurf](docs/24_Systementwurf.md)
 
 - ### [3 Systemvoraussetzungen und Softwareinstallation](docs/3_System_und_Installation.md)
     - [3.1 Installation](docs/31_Installation.md)
@@ -71,16 +71,15 @@ Details zur Einrichtung sind in Kapitel 3 der Dokumentation beschrieben.
 
 - ### [5 Nutzung der Software auf anderem Desktop](docs/5_Setup_anderer_Desktop.md)
 
-- ### [6 Anpassung und Erweiterung der Software](docs/6_Anapassung_Erweiterung.md)
+- ### [6 Anpassung und Erweiterung der Software](docs/6_Anpassung_Erweiterung.md)
 
-    - [6.1 Anpassung und Erweiterung der Software](docs/61_neue_Systemumgebung.md)
-    - [6.3 Erweiterung der Datenverarbeitung](docs/63_Erweiterung_Datenverarbeitung.md)
+    - [6.1 Anpassung und Erweiterung der Software](docs/61_Erweiterung_SQL.md)
+    - [6.2 Erweiterung der Datenverarbeitung](docs/62_Erweiterung_Datenverarbeitung.md)
 
 - ### [7 Testen der Software](docs/7_Testen_der_Software.md)
 
-    - [7.1 Referenzdaten](docs/71_Referenzdaten.md)
-    - [7.2 Testfälle](docs/72_Testfälle.md)
-    - [7.3 Testergebnisse](docs/73_Testergebnisse.md)
+    - [7.1 Testfälle](docs/71_Testfälle.md)
+    - [7.2 Testergebnisse](docs/72_Testergebnisse.md)
 
 - ### [8 Ergebnisauswertung](docs/8_Ergebnisauswertung.md)
 

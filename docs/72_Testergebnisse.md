@@ -1,6 +1,6 @@
 [zurück zur Startseite](../README.md#dokumentation)
 
-## Testergebnisse
+# 7.2 Testergebnisse
 
 Nach Abschluss der Migration wird überprüft, ob die Datenbank vollständig und korrekt in
 das neue Zielsystem überführt wurde. Diese Prüfung dient der Validierung der strukturellen
@@ -28,7 +28,7 @@ alle Tabellen vorhanden, die Primärschlüssel korrekt definiert und die Fremdsc
 vollständig abgebildet. Damit gelten die Testfälle **T01** und **T02** als erfolgreich
 durchgeführt.
 
-### Referenzdaten
+## Referenzdaten
 
 Als Referenz dienen die Ergebnisse der im Modul *Datenbanktechnologien* durchgeführten Übungen in
 Microsoft SQL Server (MS SSMS). Für jeden Testfall wird eine fachlich äquivalente Abfrage in der
@@ -40,7 +40,7 @@ Der Vergleich erfolgt abhängig vom Testtyp über:
 - **toleranzbasierte Übereinstimmung** bei räumlichen Berechnungen (z. B. Fläche/Distanz),
   sofern unterschiedliche Rechenmodelle/Einheiten zwischen den Systemen auftreten können.
 
-### Validierung der Tabelleninhalte mittels Aggregat-Signaturen
+## Validierung der Tabelleninhalte mittels Aggregat-Signaturen
 
 Die inhaltliche Überprüfung der migrierten Tabellen erfolgt nicht durch manuelle Sichtproben,
 sondern ausschließlich über aggregierte Kennzahlen (Aggregat-Signaturen). Dieses Vorgehen ist
@@ -126,7 +126,7 @@ Die Ausführung erfolgt in DB Browser für SQLite und erzeugt folgende Ausgabe:
 
 Die aggregierten Kennzahlen in Referenz- und Zielsystem gleichen sich, somit ist mit hoher Wahrscheinlichkeit davon auszugehen, dass die Tabelle vollständig und korrekt übertragen wurde.
 
-### Validierung der Tabelle *Mitarbeiter*
+## Validierung der Tabelle *Mitarbeiter*
 
 Die Validierung der Tabelle *Mitarbeiter* erfolgt analog zur zuvor beschriebenen
 Aggregat-Signatur der Tabelle *Artikel*. Ziel ist es, die Vollständigkeit und
@@ -188,7 +188,7 @@ und konsistent in das Zielsystem überführt wurde.
 
 Die Testfälle **T03** und **T04** gelten für diese Tabelle als erfolgreich durchgeführt.
 
-### Validierung der Tabelle *Bestand*
+## Validierung der Tabelle *Bestand*
 
 Die Validierung der Tabelle *Bestand* erfolgt analog zu den zuvor beschriebenen
 Aggregat-Signaturen der Tabellen *Artikel* und *Mitarbeiter*. Ziel ist es, die
@@ -242,7 +242,7 @@ MS SSMS wird die Schlüsselprüfung über `CONCAT()` realisiert und die Summatio
 explizit auf `bigint` gecastet, während in SQLite eine Zeichenkettenverkettung
 sowie `COALESCE(Menge, 0)` verwendet werden, um `NULL`-Werte neutral zu behandeln.
 
-#### Gegenüberstellung der Kennzahlen
+### Gegenüberstellung der Kennzahlen
 
 | Kennzahl                    | MS SSMS        | SQLite        |
 |-----------------------------|----------------|---------------|
@@ -259,7 +259,7 @@ konsistent und ohne Verletzung der zusammengesetzten Primärschlüssel in das
 Zielsystem übertragen wurde. Die Testfälle **T03** und **T05** gelten für diese
 Tabelle als erfolgreich durchgeführt.
 
-### Validierung der Tabelle *Verkauf*
+## Validierung der Tabelle *Verkauf*
 
 Die Tabelle *Verkauf* stellt die größte und inhaltlich komplexeste Tabelle der Datenbank dar.
 Sie besitzt einen zusammengesetzten Primärschlüssel, bestehend aus den Attributen *Artnr*,
@@ -319,7 +319,7 @@ Bei der Aggregation numerischer Werte werden in beiden Systemen `COALESCE`-Konst
 um `NULL`-Werte neutral zu behandeln; zusätzlich sind in MS SSMS explizite Typkonvertierungen
 auf `bigint` bzw. `float` erforderlich.
 
-#### Gegenüberstellung der Kennzahlen
+### Gegenüberstellung der Kennzahlen
 
 | Kennzahl                  | MS SSMS        | SQLite        |
 |---------------------------|----------------|---------------|
@@ -340,7 +340,7 @@ davon auszugehen, dass die Tabelle *Verkauf* vollständig, konsistent und ohne V
 zusammengesetzten Primärschlüssels in das Zielsystem übertragen wurde. Die Testfälle **T03**
 und **T05** gelten für diese Tabelle als erfolgreich durchgeführt.
 
-### Validierung der Tabelle Geografie
+## Validierung der Tabelle Geografie
 
 Die Validierung der Tabelle *Geografie* erfolgt getrennt von der Implementierung und dient der
 Überprüfung, ob die räumlichen und attributiven Inhalte der Tabelle vollständig und konsistent
@@ -348,7 +348,7 @@ von der Referenzdatenbank in Microsoft SQL Server nach SQLite/SpatiaLite übertr
 Da es sich um eine Geodatentabelle handelt, kombiniert die Prüfung quantitative Kennzahlen mit
 einer räumlichen Plausibilitätskontrolle.
 
-#### Quantitative Validierung mittels Kennzahlen
+### Quantitative Validierung mittels Kennzahlen
 
 Zunächst werden aggregierte Kennzahlen ermittelt, um die Vollständigkeit der Tabelle sowie die
 Konsistenz der Schlüssel- und Attributwerte zu überprüfen. Dazu wird in beiden Systemen ein
@@ -403,7 +403,7 @@ davon auszugehen, dass die Tabelle *Geografie* vollständig und korrekt übertra
 Die Testfälle **T01**, **T03** und **T11** gelten damit für diese Tabelle als erfolgreich
 durchgeführt.
 
-#### Räumliche Plausibilitätsprüfung
+### Räumliche Plausibilitätsprüfung
 
 Ergänzend zur quantitativen Analyse wird eine visuelle Prüfung der Geometrien vorgenommen. Dazu
 wird die Tabelle *Geografie* in einer GIS-Umgebung (QGIS) geladen. Ziel dieser Prüfung ist es, sicherzustellen, dass die
@@ -427,7 +427,7 @@ Die visuelle Kontrolle bestätigt, dass alle vorhandenen Flächengeometrien korr
 werden und die räumliche Lage der Bundesländer den fachlichen Erwartungen entspricht. Der
 Datensatz ohne Geometrie wird erwartungsgemäß nicht visualisiert.
 
-### Validierung der Tabelle Shop
+## Validierung der Tabelle Shop
 
 Die Validierung der Tabelle *Shop* dient der Überprüfung, ob die attributiven Inhalte sowie die
 punktförmigen Geometrien der Shops vollständig und konsistent von der Referenzdatenbank in
@@ -435,7 +435,7 @@ Microsoft SQL Server nach SQLite/SpatiaLite übertragen wurden. Analog zur Tabel
 erfolgt die Prüfung durch eine Kombination aus quantitativer Kennzahlenanalyse und räumlicher
 Plausibilitätskontrolle.
 
-#### Quantitative Validierung mittels Kennzahlen
+### Quantitative Validierung mittels Kennzahlen
 
 Zunächst werden aggregierte Kennzahlen herangezogen, um die Vollständigkeit der Tabelle, die
 Eindeutigkeit des Primärschlüssels sowie die Konsistenz der relevanten Attribute zu überprüfen.
@@ -482,7 +482,7 @@ Die ermittelten Kennzahlen stimmen zwischen MS SSMS und SQLite vollständig übe
 übertragen wurde. Die Testfälle T01, T03 und T11 gelten für diese Tabelle als
 erfolgreich durchgeführt.
 
-#### Räumliche Plausibilitätsprüfung
+### Räumliche Plausibilitätsprüfung
 
 Ergänzend zur quantitativen Analyse wird eine visuelle Prüfung der Punktgeometrien vorgenommen.
 Hierfür wird die Tabelle *Shop* in derselben GIS-Umgebung geladen, die bereits für die Validierung
@@ -495,9 +495,9 @@ Die visuelle Kontrolle zeigt, dass alle Shops innerhalb der erwarteten Bundeslä
 keine offensichtlichen räumlichen Auffälligkeiten wie stark verschobene oder falsch zugeordnete
 Punkte auftreten. Damit ist auch die räumliche Plausibilität der Tabelle *Shop* gegeben.
 
-### Validierung der Sachdatenabfragen
+## Validierung der Sachdatenabfragen
 
-#### T07 – Sortierte Sachdatenabfrage (Geburtstagskalender)
+### T07 – Sortierte Sachdatenabfrage (Geburtstagskalender)
 
 Ziel dieses Testfalls ist die Validierung einer fachlich äquivalenten,
 sortierten Sachdatenabfrage zwischen der Referenzumgebung
@@ -543,7 +543,7 @@ Die Resultsets beider Systeme weisen identische Datensätze sowie eine vollstän
 Damit ist nachgewiesen, dass die Zielumgebung SQLite sortierte
 Sachdatenabfragen fachlich korrekt und reproduzierbar ausführen kann.
 
-#### T08 – Join Mitarbeiter–Shop
+### T08 – Join Mitarbeiter–Shop
 
 Ziel dieses Testfalls ist die Validierung einer fachlich äquivalenten
 Join-Abfrage zwischen der Referenzumgebung (Microsoft SQL Server, MS SSMS)
@@ -602,7 +602,7 @@ Testfall bildet zugleich die Grundlage für den nachfolgenden Testfall
 **T09 (Aggregation / View)**, in dem aufbauend auf korrekt verknüpften
 Datensätzen Aggregatfunktionen überprüft werden.
 
-#### T09 – Aggregation von Sachdaten (Gruppierung)
+### T09 – Aggregation von Sachdaten (Gruppierung)
 
 Ziel dieses Testfalls ist die Validierung einer fachlich äquivalenten
 Aggregationsabfrage zwischen der Referenzumgebung (Microsoft SQL Server, MS SSMS)
@@ -667,7 +667,7 @@ ausführen kann. Der Testfall baut auf den zuvor validierten
 JOIN-Operationen aus **T08** auf und schließt die Prüfung der zentralen
 Sachdatenfunktionen ab.
 
-#### T10 – Darstellung von Flächengeometrien
+### T10 – Darstellung von Flächengeometrien
 
 Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung (SQLite in
 Kombination mit SpatiaLite und Python) in der Lage ist, gespeicherte
@@ -711,7 +711,7 @@ verarbeiten und visualisieren kann.
 Damit ist nachgewiesen, dass die grundlegende Verarbeitung und Darstellung
 räumlicher Daten in der Zielumgebung möglich ist.
 
-#### T11 – Räumliche Selektion: Punkt-in-Polygon
+### T11 – Räumliche Selektion: Punkt-in-Polygon
 
 Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung (SQLite in
 Kombination mit SpatiaLite und Python) in der Lage ist, räumliche Prädikate
@@ -764,7 +764,7 @@ Punkt-in-Polygon-Abfragen fachlich korrekt ausführen kann.
 Der Testfall **T11 – Räumliche Selektion: Punkt-in-Polygon** gilt somit als
 erfolgreich durchgeführt.
 
-#### T12 – Räumliche Berechnung: Flächenberechnung von Bundesländern
+### T12 – Räumliche Berechnung: Flächenberechnung von Bundesländern
 
 Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung (SQLite in
 Kombination mit SpatiaLite und Python) in der Lage ist, räumliche Berechnungen
@@ -818,7 +818,7 @@ Genauigkeit durchzuführen.
 Der Testfall **T12 – Räumliche Berechnung: Flächenberechnung von
 Bundesländern** gilt somit als erfolgreich durchgeführt.
 
-#### T13 – Räumliche Berechnung: Referenzpunkt und Distanzberechnung
+### T13 – Räumliche Berechnung: Referenzpunkt und Distanzberechnung
 
 Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung (SQLite in
 Kombination mit SpatiaLite und Python) in der Lage ist, eine vollständige
@@ -891,7 +891,7 @@ Distanzberechnung** gilt somit als erfolgreich durchgeführt.
 
 ---
 <div style="display: flex; justify-content: space-between;">
-  <a href="72_Testfälle.md">◀ 7.2 Testfälle</a>
+  <a href="71_Testfälle.md">◀ 7.1 Testfälle</a>
   <a href="8_Ergebnisauswertung.md">8 Ergebnisauswertung
  ▶</a>
 </div>

@@ -1,10 +1,10 @@
 [zurück zur Startseite](../README.md)
 
-# Nutzung der Software auf anderem Desktop
+# 5 Nutzung der Software auf anderem Desktop
 
 Dieses Kapitel beschreibt die Voraussetzungen und notwendigen Schritte zur Nutzung
 und Wartung der entwickelten Softwarelösung auf einem anderen Desktop-Rechner.
-Ziel ist es, die Übertragbarkeit der Projektartefakte sicherzustellen und eine
+Ziel ist es, die Übertragbarkeit der Projekdateien sicherzustellen und eine
 Weiterverwendung der Anwendungen unabhängig vom ursprünglichen Entwicklungsrechner
 zu ermöglichen.
 
@@ -17,7 +17,7 @@ erforderlich:
 
 1. **Übertragung der Projektdateien**  
    Das vollständige Projektverzeichnis, bestehend aus den angefertigten Python-Skripten und -Modulen sowie der SQLite-Datenbankdatei,
-   wird auf den Zielrechner kopiert. Eine Installation im klassischen Sinne ist nicht erforderlich.
+   wird auf den Zielrechner übertragen. Eine Installation im klassischen Sinne ist nicht erforderlich.
 
 2. **Anpassung systemabhängiger Pfade**  
    In der Datei `dbparam.py` sind Pfade zur SQLite-Datenbank, zum
@@ -39,8 +39,8 @@ erforderlich:
    **Anmerkung:** Es ist dennoch empfohlen für eine Lokalisierung auftretender Fehlers, die während der Laufzeit der Anwendungen auftretenden Fehlermeldungen heranzuziehen. Fehlende oder fehlerhaft installierte Python-Bibliotheken sind ebenfalls auf diesem Weg identifizierbar.
 
 Nach Durchführung dieser Schritte können die Python-Anwendungen auf dem neuen
-Rechner ausgeführt werden. Die Programme verhalten sich
-identisch zur ursprünglichen Entwicklungsumgebung, da alle datenbankseitigen Operationen vollständig innerhalb der SQLite-Datenbankdatei ausgeführt werden.
+Rechner ausgeführt werden. Die Programme sollten sich
+identisch zur hier gezeigten Entwicklungsumgebung verhalten, da alle datenbankseitigen Operationen vollständig innerhalb der SQLite-Datenbankdatei ausgeführt werden.
 
 ---
 <div style="display: flex; justify-content: space-between;">

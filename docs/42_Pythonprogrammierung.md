@@ -1,10 +1,10 @@
 [zurück zur Startseite](../README.md)
 
-## 3.2 Python-Programmierung
+# 4.2 Python-Programmierung
 
 Wie schon im Kapitel *Systementwurf* beschrieben, sind die Python-Anwendungen  modular aufgebaut: Kernfunktionen für den Datenbankzugriff und die Verwaltung der SQL-Anweisungen sind in eigenständigen Modulen gekapselt, während die Datenauswertung als schlanke Skripte implementiert sind, die diese Bausteine lediglich orchestrieren.
 
-### 3.2.1 Verbindungslogik zur Datenbank (`dbparam.py`)
+## Verbindungslogik zur Datenbank (`dbparam.py`)
 
 Das Modul `dbparam.py` kapselt den Verbindungsaufbau zur SQLite-Datenbank und das Laden der SpatiaLite-Erweiterung. Die Anwendung benötigt dafür die Module `os` und `sqlite3` sowie die Klasse `path` des Moduls `pathlib` und den Dekorator `contextmanager`.
 
@@ -103,7 +103,7 @@ bei dessen Verlassen. <br>
 
 Die Kombination mit dem `try`-`finally`-Block stellt folgenden Ablauf sicher: Egal, wie der `with`-Block verlassen wird - ob mit oder ohne einem Fehler - der Code im `finally`-Block wird immer ausgeführt. Dadurch wird die Datenbankverbindung, unabhängig vom erfolgreichen Ausführen der SQL-Statements stets geschlossen.
 
-## 3.2.2 Verwaltung der SQL-Anweisungen (`queries.py`)
+## Verwaltung der SQL-Anweisungen (`queries.py`)
 
 Das Modul `queries.py` dient der zentralen Verwaltung sämtlicher im Projekt verwendeter
 SQL-Anweisungen. Alle Abfragen werden in einem Dictionary namens `SQL_QUERIES` hinterlegt, das die
@@ -174,7 +174,7 @@ CAST(substr(GebDat, 7, 2) AS INTEGER) AS Tag
 
 Diese Anpassung ermöglicht es, die fachliche Logik der MS SQL-Server-Aufgabe trotz genannter Abweichungen beizubehalten.
 
-## 3.2.3 Python-Anwendungen für die Sachdatenwiedergabe
+## Python-Anwendungen für die Sachdatenwiedergabe
 
 Nach der Migration der Datenbank sowie der zentralen Bereitstellung der Verbindungslogik
 (`dbparam.py`) und der SQL-Anweisungen (`queries.py`) erfolgt die eigentliche
@@ -335,7 +335,7 @@ Der folgende Auszug zeigt die Struktur des erzeugten `DataFrame`:
                     [...]
 ```
 
-## 3.2.4 Python-Anwendungen für Geodatenwiedergabe
+## Python-Anwendungen für Geodatenwiedergabe
 
 Die Programme zur Visualisierung von Geodaten folgen grundlegend dem gleichen Aufbau wie die
 Skripte zur Sachdatenwiedergabe. Ergänzt wird dieser Ablauf um die Aufbereitung binärer Geometriedaten

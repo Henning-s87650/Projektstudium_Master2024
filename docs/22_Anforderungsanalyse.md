@@ -18,7 +18,7 @@ Zusätzlich erfolgt eine Differenzierung zwischen Anforderungen an:
 
 Die hier definierten Anforderungen dienen nicht ausschließlich der konzeptionellen Beschreibung des Systems, sondern stellen zugleich die Bewertungsgrundlage für die in [Kapitel 7](72_Testfälle.md) dargestellten Testfälle dar.
 
-## 2.2.1 Anforderungen an die Datenbank
+## Anforderungen an die Datenbank
 
 Die Anforderungen an die Datenbank definieren die strukturelle und funktionale Reproduzierbarkeit der Referenzumgebung auf Schema- und SQL-Ebene. Sie legen fest, welche Eigenschaften die SQLite-/SpatiaLite-Datenbank aufweisen muss, um die fachlichen Aufgaben der MS-SQL-Server-Datenbank gleichwertig abbilden zu können.
 
@@ -59,9 +59,7 @@ Die Datenbank muss Aggregatfunktionen und Gruppierungen unterstützen. Dazu zäh
 
 Die Ergebnisse müssen reproduzierbar und fachlich korrekt sein.
 
----
-
-### Übersicht funktionale Anforderungen (Datenbank)
+### Übersicht funktionale Anforderungen an die Datenbank
 
 | Nummer | Anforderung | Beschreibung |
 |--------|------------|--------------|
@@ -70,7 +68,6 @@ Die Ergebnisse müssen reproduzierbar und fachlich korrekt sein.
 | FD3 | Geometrische Berechnungen | Berechnung von Flächen und Distanzen |
 | FD4 | Aggregation und Views | Unterstützung von Aggregatfunktionen und Gruppierungen |
 
----
 
 ### Nicht-funktionale Anforderungen an die Datenbank
 
@@ -88,9 +85,7 @@ Primär- und Fremdschlüsselbeziehungen müssen korrekt implementiert werden. Di
 
 Die Tabellendaten der SQLite-Datenbank müssen inhaltlich mit der Referenzdatenbank übereinstimmen. Abweichungen auf Zeilen- oder Attributebene würden die Vergleichbarkeit der Systeme beeinträchtigen.
 
----
-
-### Übersicht nicht-funktionale Anforderungen (Datenbank)
+### Übersicht nicht-funktionale Anforderungen an die Datenbank
 
 | Nummer | Anforderung | Beschreibung |
 |--------|------------|--------------|
@@ -98,9 +93,7 @@ Die Tabellendaten der SQLite-Datenbank müssen inhaltlich mit der Referenzdatenb
 | ND2 | Relationen | Korrekte Abbildung von PK- und FK-Beziehungen |
 | ND3 | Inhaltliche Übereinstimmung | Identische Datenbestände im Zielsystem |
 
----
-
-## 2.2.2 Anforderungen an die Python-Programme
+## Anforderungen an die Python-Programme
 
 Die Python-Anwendungen bilden die Schnittstelle zwischen Datenbank und Nutzer. Ziel ist es, die in der Referenzumgebung ausgeführten SQL-Abfragen über Python reproduzierbar auszuführen und die Ergebnisse fachlich korrekt darzustellen.
 
@@ -140,7 +133,7 @@ Die Ergebnisse nicht-räumlicher Abfragen müssen strukturiert und nachvollziehb
 
 Geometrien müssen aus dem Datenbanksystem ausgelesen, interpretiert und grafisch dargestellt werden können.
 
-### Übersicht funktionale Anforderungen (Python)
+### Übersicht funktionale Anforderungen an die Python-Programme
 
 | Nummer | Anforderung | Beschreibung |
 |--------|------------|--------------|
@@ -151,7 +144,7 @@ Geometrien müssen aus dem Datenbanksystem ausgelesen, interpretiert und grafisc
 | FP5 | Tabellarische Ausgabe | Strukturierte Darstellung von Sachdaten |
 | FP6 | Visualisierung | Grafische Darstellung von Geometrien |
 
-### Nicht-funktionale Anforderungen an die Python-Programme (NP)
+### Nicht-funktionale Anforderungen an die Python-Programme
 
 Die nicht-funktionalen Anforderungen betreffen Eigenschaften der Python-Lösung, die über die reine Funktionserfüllung hinausgehen.
 
@@ -166,9 +159,7 @@ Der Code soll modular strukturiert sein. Verbindungslogik, Abfrageverwaltung und
 - einzelne Komponenten unabhängig testen und erweitern zu können  
 - die Wartbarkeit und Wiederverwendbarkeit zu erhöhen  
 
----
-
-### Übersicht nicht-funktionale Anforderungen (Python)
+### Übersicht nicht-funktionale Anforderungen an die Python-Programme
 
 | Nummer | Anforderung | Beschreibung |
 |--------|------------|--------------|
@@ -179,5 +170,5 @@ Der Code soll modular strukturiert sein. Verbindungslogik, Abfrageverwaltung und
 ---
 <div style="display: flex; justify-content: space-between;">
   <a href="21_Datengrundlage.md">◀ 2.1 Datengrundlage</a>
-  <a href="23_Systementwurf.md">2.3 Systementwurf ▶</a>
+  <a href="23_Auswahl_Python_Bibliotheken.md">2.3 Auswahl der Python-Bibliotheken ▶</a>
 </div>

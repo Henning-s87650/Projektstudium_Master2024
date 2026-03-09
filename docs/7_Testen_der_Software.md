@@ -1,6 +1,6 @@
 [zurück zur Startseite](../README.md)
 
-# Testen der Software
+# 7 Testen der Software
 
 Dieses Kapitel beschreibt die Überprüfung der entwickelten Softwarelösung hinsichtlich ihrer
 fachlichen Korrektheit und Vergleichbarkeit mit der Referenzumgebung aus den MS-SQL-Server-Übungen
@@ -15,15 +15,13 @@ Die Tests sind so gewählt, dass sie die zuvor definierten Anforderungen abdecke
 
 ## Unterkapitel
 
-- [7.1 Referenzdaten](71_Referenzdaten.md)
+- [7.1 Testfälle](71_Testfälle.md)
 
-- [7.2 Testfälle](72_Testfälle.md)
-
-- [7.3 Testergebnisse](73_Testergebnisse.md)
+- [7.2 Testergebnisse](72_Testergebnisse.md)
 
 ---
 <div style="display: flex; justify-content: space-between;">
-  <a href="63_Erweiterung_Datenverarbeitung.md">◀ 6.3 Erweiterung der Datenverarbeitung</a>
-  <a href="71_Referenzdaten.md">7.1 Referenzdaten
+  <a href="62_Erweiterung_Datenverarbeitung.md">◀ 6.2 Erweiterung der Datenverarbeitung</a>
+  <a href="71_Testfälle.md">7.1 Testfälle
  ▶</a>
 </div>

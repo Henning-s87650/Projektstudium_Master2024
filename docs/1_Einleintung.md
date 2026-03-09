@@ -1,8 +1,6 @@
 [zurück zur Startseite](../README.md)
 
-# Einleitung
-
-1 Einleitung (überarbeitet)
+# 1 Einleitung
 
 Die Analyse und Visualisierung raumbezogener Daten ist ein zentraler Bestandteil geoinformatischer Anwendungen. Relationale Datenbanksysteme übernehmen dabei die strukturierte Speicherung und Verwaltung sowohl von Sachdaten als auch von Geometrien. Während etablierte Systeme wie Microsoft SQL Server integrierte Lösungen für relationale und räumliche Daten bereitstellen, gewinnen Open-Source-Technologien zunehmend an Bedeutung.
 
