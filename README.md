@@ -27,7 +27,8 @@ Die Untersuchung umfasst insbesondere:
 
 ## Repository-Struktur
 
- Projektstudium_Master2024
+```text
+Projektstudium_Master2024
 ├── README.md
 ├── data
 │   └── gm23s87650.db
@@ -128,6 +129,7 @@ Die Untersuchung umfasst insbesondere:
 │       ├── __init__.py
 │       └── __pycache__
 │           └── 01_geburtstagskalender.cpython-314.pyc
+```
 
 ## Technische Grundlage
 
