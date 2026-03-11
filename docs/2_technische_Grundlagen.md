@@ -66,3 +66,12 @@ Abschließend wird ein Systementwurf vorgestellt, der die Architektur der Zielum
 <p align="right">
   <a href="21_Datengrundlage.md">2.1 Datengrundlage ▶</a>
 </p>
+
+<hr>
+
+<p align="left">
+  <a href="VORHERIGE_DATEI.md">◀ Vorheriges Kapitel</a>
+</p>
+<p align="right">
+  <a href="NAECHSTE_DATEI.md">Nächstes Kapitel ▶</a>
+</p>
