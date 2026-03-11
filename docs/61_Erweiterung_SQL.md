@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 6 Anpassung und Erweiterung der Software](6_Anpassung_Erweiterung.md)
 
 # 6.1 Erweiterung der SQL-Verwaltung
 
@@ -75,8 +77,4 @@ print(df)
 In beiden Varianten ist ersichtlich, dass nur minimale Änderungen erforderlich sind, um neue SQL-Abfragen in das bestehende System zu integrieren.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="6_Anpassung_Erweiterung.md">◀ 6 Anpassung und Erweiterung der Software</a>
-  <a href="62_Erweiterung_Datenverarbeitung.md">6.2 Erweiterung der Datenverarbeitung
- ▶</a>
-</div>
+[6.2 Erweiterung der Datenverarbeitung ▶](62_Erweiterung_Datenverarbeitung.md)

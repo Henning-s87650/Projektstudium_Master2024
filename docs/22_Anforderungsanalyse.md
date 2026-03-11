@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 2.1 Datengrundlage](21_Datengrundlage.md)
 
 # 2.2 Anforderungsanalyse
 
@@ -168,7 +170,5 @@ Der Code soll modular strukturiert sein. Verbindungslogik, Abfrageverwaltung und
 | NP3 | Transparenz | nachvollziehbare Struktur des Programmcodes |
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="21_Datengrundlage.md">◀ 2.1 Datengrundlage</a>
-  <a href="23_Auswahl_Python_Bibliotheken.md">2.3 Auswahl der Python-Bibliotheken ▶</a>
-</div>
+
+[2.3 Auswahl der Python-Bibliotheken ▶](23_Auswahl_Python_Bibliotheken.md)

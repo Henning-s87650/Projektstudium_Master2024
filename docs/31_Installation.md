@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 3 Systemvoraussetzungen und Softwareinstallation](3_System_und_Installation.md)
 
 # 3.1 Installation der benötigten Softwarekomponenten
 
@@ -118,8 +120,4 @@ Tabellenstruktur sowie zur Ausführung einzelner SQL-Abfragen empfohlen.
 DB Browser for SQLite kann von der [offiziellen Projektseite](https://sqlitebrowser.org/) heruntergeladen werden. Es stehen zwei Version zur Verfügung. Zum einen *DB Browser for SQLite - Standard installer* für die Nutzung eines grafischen Installers, wie man es herkommlicherweise von Windows-Anwednungen kennt. Zum anderen *DB Browser for SQLite - . zip (no installer)*, für welche die Installation, wie bei SQLite und SpatiaLite vorgenommen wird.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="3_System_und_Installation.md">◀ 3 Systemvoraussetzungen und Softwareinstallation</a>
-  <a href="32_Setup.md">3.2 Setup der Projektumgebung
- ▶</a>
-</div>
+[3.2 Setup der Projektumgebung ▶](32_Setup.md)

@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 2.3 Auswahl der Python-Bibliotheken](23_Auswahl_Python_Bibliotheken.md)
 
 # 2.4 Systementwurf
 
@@ -72,7 +74,5 @@ Der Systementwurf folgt drei grundlegenden Prinzipien:
 Der dargestellte Entwurf bildet die konzeptionelle Grundlage für die in [Kapitel 4](4_Implementierung.md) beschriebene Implementierung sowie für die spätere Validierung der funktionalen Gleichwertigkeit.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="22_Anforderungsanalyse.md">◀ 2.3 Anforderungsanalyse</a>
-  <a href="3_System_und_Installation.md">3 Systemvoraussetzungen und Softwareinstallation ▶</a>
-</div>
+
+[3 Systemvoraussetzungen und Softwareinstallation ▶](3_System_und_Installation.md)

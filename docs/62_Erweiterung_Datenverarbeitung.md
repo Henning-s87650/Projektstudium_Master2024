@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 6 Anpassung und Erweiterung der Software](6_Anpassung_Erweiterung.md)
 
 # 6.2 Erweiterung der Datenverarbeitung
 
@@ -64,8 +66,4 @@ Die Ausführung des Skripts liefert nun folgendes Ergebnis:
 ![neu eingefärbte Bundesländer](media/bunte_Bundeslaender.png)
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="61_Erweiterung_SQL.md">◀ 6.1 Erweiterung der SQL-Verwaltung</a>
-  <a href="7_Testen_der_Software.md">7 Testen der Software
- ▶</a>
-</div>
+[7 Testen der Software ▶](7_Testen_der_Software.md)

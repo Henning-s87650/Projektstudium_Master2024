@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 5 Nutzung der Software auf anderem Desktop](5_Setup_anderer_Desktop.md)
 
 # 6 Anpassung und Erweiterung der Software
 
@@ -12,8 +14,4 @@ Die folgenden Abschnitte beschreiben exemplarisch, wie neue Anforderungen in den
 - [6.2 Erweiterung der Datenverarbeitung](62_Erweiterung_Datenverarbeitung.md)
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="5_Setup_anderer_Desktop.md">◀ 5 Nutzung der Software auf anderem Desktop</a>
-  <a href="61_Erweiterung_SQL.md">6.1 Erweiterung der SQL-Verwaltung
- ▶</a>
-</div>
+[6.1 Erweiterung der SQL-Verwaltung ▶](61_Erweiterung_SQL.md)

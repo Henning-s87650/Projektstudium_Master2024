@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 2.4 Systementwurf](24_Systementwurf.md)
 
 # 3 Systemvoraussetzungen und Softwareinstallation
 
@@ -19,8 +21,4 @@ Im folgenden Kapitel ist die Installation und Konfiguration der benötigten Komp
 - [3.2 Setup der Projektumgebung](32_Setup.md)
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="24_Systementwurf.md">◀ 2.4 Systementwurf</a>
-  <a href="31_Installation.md">3.1 Installation der benötigten Softwarekomponenten
- ▶</a>
-</div>
+[3.1 Installation der benötigten Softwarekomponenten ▶](31_Installation.md)

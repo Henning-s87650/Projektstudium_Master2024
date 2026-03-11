@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 8 Ergebnisauswertung](8_Ergebnisauswertung.md)
 
 # Fazit
 
@@ -13,5 +15,3 @@ Die ursprünglich vorgesehene Anbindung über einen Object-Relational Mapper (SQ
 In der Gesamteinordnung zeigt sich, dass SQLite in Kombination mit SpatiaLite und Python eine fachlich geeignete Alternativlösung zur Bearbeitung der untersuchten Aufgaben darstellt. Die Lösung ist vollständig Open-Source-basiert, portabel und flexibel einsetzbar. Sie stellt jedoch keinen unmittelbar gleichwertigen Ersatz für ein integriertes, serverbasiertes relationales Datenbankmanagementsystem dar, da sie höhere Anforderungen an Konfiguration, Systemverständnis und explizite Implementierung stellt.
 
 Die Arbeit kommt somit zu dem Ergebnis, dass die untersuchten Python-Open-Source-Bibliotheken in Verbindung mit einer SQLite/SpatiaLite-Datenbank grundsätzlich geeignet sind, raumbezogene Sachdaten zu analysieren und zu visualisieren. Die Eignung ist fachlich gegeben, der Implementierungsaufwand und der Integrationsgrad unterscheiden sich jedoch deutlich von einer proprietären, vollständig integrierten Datenbanklösung wie Microsoft SQL Server.
-
-[◀ 8 Ergebnisauswertung](8_Ergebnisauswertung.md)

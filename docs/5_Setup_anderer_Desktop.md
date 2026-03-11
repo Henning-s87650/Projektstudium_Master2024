@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 4 Implementierung](41_Migration.md)
 
 # 5 Nutzung der Software auf externem Desktop
 
@@ -43,8 +45,4 @@ Rechner ausgeführt werden. Die Programme sollten sich
 identisch zur hier gezeigten Entwicklungsumgebung verhalten, da alle datenbankseitigen Operationen vollständig innerhalb der SQLite-Datenbankdatei ausgeführt werden.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="42_Pythonprogrammierung.md">◀ 4.2 Python-Programmierung</a>
-  <a href="6_Anpassung_Erweiterung.md">6 Anpassung und Erweiterung der Software
- ▶</a>
-</div>
+[6 Anpassung und Erweiterung der Software ▶](6_Anpassung_Erweiterung.md)

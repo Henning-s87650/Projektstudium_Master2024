@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 3.2 Setup der Projektumgebung](32_Setup.md)
 
 # 4 Implementierung
 
@@ -17,7 +19,4 @@ Die folgenden Abschnitte dokumentieren die beiden Umsetzungsschritte und zeigen,
 - [4.2 Python-Programmierung](42_Pythonprogrammierung.md)
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="32_Setup.md">◀ 3.2 Setup der Projektumgebung</a>
-  <a href="41_Migration.md">4.1 Datenbankmigration ▶</a>
-</div>  
+[4.1 Datenbankmigration ▶](41_Migration.md)

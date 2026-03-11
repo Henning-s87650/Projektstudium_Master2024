@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 2.2 Anforderungsanalyse](22_Anforderungsanalyse.md)
 
 # 2.3  Auswahl der Python-Bibliotheken
 
@@ -142,7 +144,5 @@ GeoPandas bietet demgegenüber eine integrierte, aber zugleich schlanke Lösung 
 Für die Entwicklung des Systemkonzepts wird daher GeoPandas als zentrale Bibliothek in Betracht gezogen.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="22_Anforderungsanalyse.md">◀ 2.2 Anforderungsanalyse</a>
-  <a href="24_Systementwurf.md">2.4 Systementwurf ▶</a>
-</div>
+
+[2.4 Systementwurf ▶](24_Systementwurf.md)

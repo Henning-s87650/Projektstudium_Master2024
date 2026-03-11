@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 3.1 Installation der benötigten Softwarekomponenten](31_Installation.md)
 
 # 3.2 Setup der Projektumgebung
 
@@ -43,7 +45,4 @@ Sind diese Voraussetzungen erfüllt, ist keine weitere Initialisierung oder Vorb
 erforderlich.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="31_Installation.md">◀ 3.1 Installation der benötigten Softwarekomponenten</a>
-  <a href="4_Implementierung.md">4 Implementierung ▶</a>
-</div>
+[4 Implementierung ▶](4_Implementierung.md)

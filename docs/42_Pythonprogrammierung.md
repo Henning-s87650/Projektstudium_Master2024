@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 4 Implementierung](41_Migration.md)
 
 # 4.2 Python-Programmierung
 
@@ -440,8 +442,4 @@ Das Ausführen des Skriptes öffnet zwei separate Fenster, in denen die Geometri
 **Anmerkung:** Die Laufzeit des Skriptes wird erst mit dem Schließen dieser Fenster beendet.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="41_Migration.md">◀ 4.1 Datenbankmigration</a>
-  <a href="5_Setup_anderer_Desktop.md">5 Nutzung der Software auf anderem Desktop
- ▶</a>
-</div>
+[5 Nutzung der Software auf anderem Desktop ▶](5_Setup_anderer_Desktop.md)

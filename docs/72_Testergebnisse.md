@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md#dokumentation)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 7.1 Testfälle](71_Testfaelle.md)
 
 # 7.2 Testergebnisse
 
@@ -862,8 +864,4 @@ Der Testfall **T13 – Räumliche Berechnung: Referenzpunkt und
 Distanzberechnung** gilt somit als erfolgreich durchgeführt.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="71_Testfaelle.md">◀ 7.1 Testfälle</a>
-  <a href="8_Ergebnisauswertung.md">8 Ergebnisauswertung
- ▶</a>
-</div>
+[8 Ergebnisauswertung ▶](8_Ergebnisauswertung.md)

@@ -1,4 +1,4 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
 
 # 1 Einleitung
 
@@ -17,6 +17,4 @@ Die entwickelte Lösung wird abschließend anhand definierter Testfälle validie
 Die Arbeit gliedert sich wie folgt: Kapitel 2 beschreibt die technischen Grundlagen sowie die Anforderungsanalyse und den Systementwurf. Kapitel 3 und 4 dokumentieren Installation, Migration und Implementierung der Zielumgebung. Kapitel 7 stellt die Testkonzeption und Validierung dar. Kapitel 8 diskutiert die Ergebnisse im Vergleich zur Referenzumgebung. Das Fazit fasst die zentralen Erkenntnisse zusammen und ordnet den Ansatz hinsichtlich seiner Einsatzmöglichkeiten ein.
 
 ---
-<div style="text-align: right;">
-  <a href="2_technische_Grundlagen.md">2 technische Grundlagen ▶</a>
-</div>
+[2 technische Grundlagen ▶](2_technische_Grundlagen.md)

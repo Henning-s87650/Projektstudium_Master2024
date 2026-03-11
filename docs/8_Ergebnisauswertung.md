@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 7.2 Testergebnisse](72_Testergebnisse.md)
 
 # Ergebnisauswertung
 
@@ -33,8 +35,4 @@ SQLite hingegen verfolgt einen anderen architektonischen Ansatz. Es handelt sich
 Diese Architektur bietet Vorteile hinsichtlich Portabilität, Offenheit und Flexibilität, erfordert jedoch einen höheren Integrations- und Konfigurationsaufwand. Während der SQL Server eine stark integrierte, zentral verwaltete Umgebung bereitstellt, stellt die Kombination aus SQLite, SpatiaLite und Python eine modulare Lösung dar, bei der Verantwortung für Koordinatenreferenzsysteme, Erweiterungen und Systemkompatibilität stärker beim Anwender liegt.
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="72_Testergebnisse.md">◀ 7.2 Testergebnisse</a>
-  <a href="9_Fazit.md">9 Fazit
- ▶</a>
-</div>
+[9 Fazit ▶](9_Fazit.md)

@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 2 technische Grundlagen](2_technische_Grundlagen.md)
 
 # 2.1 Datengrundlage
 
@@ -16,7 +18,4 @@ Die strukturelle Integrität (Tabellen, Schlüssel, Relationen) sowie die inhalt
 
 ---
 
-<div style="display: flex; justify-content: space-between;">
-  <a href="2_technische_Grundlagen.md">◀ 2 technische Grundlagen</a>
-  <a href="22_Anforderungsanalyse.md">2.2 Anforderungsanalyse ▶</a>
-</div>
+[2.2 Anforderungsanalyse ▶](22_Anforderungsanalyse.md)

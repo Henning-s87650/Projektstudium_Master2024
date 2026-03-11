@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 4 Implementierung](4_Implementierung.md)
 
 # 4.1 Datenbankmigration
 
@@ -110,8 +112,4 @@ Der eigentliche Migrationsprozess wird anschließend über den **Run-Button** ge
 Nach Abschluss des Prozesses stehen sämtliche Tabelleninhalte in der SQLite-Datenbank zur Verfügung. Diese bildet die Datengrundlage für die im folgenden Abschnitt beschriebene Python-basierte Auswertungsumgebung.
 
 ---
-
-<div style="display: flex; justify-content: space-between;">
-  <a href="4_Implementierung.md">◀ 4 Implementierung</a>
-  <a href="42_Pythonprogrammierung.md">4.2 Pythonprogrammierung ▶</a>
-</div>
+[4.2 Pythonprogrammierung ▶](42_Pythonprogrammierung.md)

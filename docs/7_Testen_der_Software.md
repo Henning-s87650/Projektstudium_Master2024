@@ -1,4 +1,6 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
+
+[◀ 6.2 Erweiterung der Datenverarbeitung](62_Erweiterung_Datenverarbeitung.md)
 
 # 7 Testen der Software
 
@@ -19,8 +21,4 @@ Die Tests sind so gewählt, dass sie die zuvor definierten Anforderungen abdecke
 - [7.2 Testergebnisse](72_Testergebnisse.md)
 
 ---
-<div style="display: flex; justify-content: space-between;">
-  <a href="62_Erweiterung_Datenverarbeitung.md">◀ 6.2 Erweiterung der Datenverarbeitung</a>
-  <a href="71_Testfaelle.md">7.1 Testfälle
- ▶</a>
-</div>
+[7.1 Testfälle ▶](71_Testfaelle.md)

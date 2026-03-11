@@ -26,5 +26,4 @@ Abschließend wird ein Systementwurf vorgestellt, der die Architektur der Zielum
 
 ---
 
-[2.1 Datengrundlage
- ▶](21_Datengrundlage.md)
+[2.1 Datengrundlage ▶](21_Datengrundlage.md)
