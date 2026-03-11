@@ -25,6 +25,25 @@ Abschließend wird ein Systementwurf vorgestellt, der die Architektur der Zielum
 ---
 <div style="display: flex; justify-content: space-between;">
   <a href="1_Einleitung.md">◀ 1 Einleitung</a>
-  <a href="21_Datengrundlage">2.1 Datengrundlage
+  <a href="21_Datengrundlage.md">2.1 Datengrundlage
  ▶</a>
 </div>
+
+<hr>
+
+<hr>
+
+<table width="100%">
+<tr>
+<td align="left">
+
+<a href="1_Einleitung.md">◀ 1 Einleitung</a>
+
+</td>
+<td align="right">
+
+<a href="21_Datengrundlage.md">2.1 Datengrundlage ▶</a>
+
+</td>
+</tr>
+</table>
