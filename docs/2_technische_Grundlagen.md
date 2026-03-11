@@ -1,4 +1,4 @@
-[zurück zur Startseite](../README.md)
+[🏠 zurück zur Startseite](../README.md)
 
 [◀ 1 Einleitung](1_Einleitung.md)
 
