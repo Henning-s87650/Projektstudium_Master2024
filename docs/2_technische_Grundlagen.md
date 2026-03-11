@@ -58,3 +58,11 @@ Abschließend wird ein Systementwurf vorgestellt, der die Architektur der Zielum
     </td>
   </tr>
 </table>
+
+<p align="left">
+  <a href="1_Einleitung.md">◀ 1 Einleitung</a>
+</p>
+
+<p align="right">
+  <a href="21_Datengrundlage.md">2.1 Datengrundlage ▶</a>
+</p>
