@@ -18,20 +18,7 @@ Für die Übertragung der Datensätze wird die **Feature Manipulation Engine (FM
 ## Erstellung des Datenbankschemas mit DB Browser for SQLite
 
 Im DB Browser for SQLite wird zunächst eine neue Datenbank angelegt. Anschließend wird das Datenbankschema durch das Anlegen der Tabellen sowie die Definition von Schlüsselattributen und Constraints aufgebaut. Die Datenbank trägt – analog zu ihrem Gegenstück im MS SQL Server – den Namen *gm23s87650.db*.
-
-Die benötigten SQL-Anweisungen werden im Fenster *SQL ausführen* ausgeführt. Das folgende Beispiel zeigt das SQL-Statement zum Erstellen der Tabelle *Bestand*.
-
-```sql
-CREATE TABLE Bestand (
-    Artnr INTEGER NOT NULL,
-    Shop_ID INTEGER NOT NULL,
-    Menge INTEGER,
-    CONSTRAINT PK_Bestand PRIMARY KEY(Shop_ID, Artnr),
-    CONSTRAINT FK_Artnr FOREIGN KEY (Artnr) REFERENCES Artikel(Artnr),
-    CONSTRAINT FK_Shop_id FOREIGN KEY (Shop_ID) REFERENCES Shop(Shop_ID)
-);
-```
-
+Die benötigten SQL-Anweisungen werden im Fenster *SQL ausführen* ausgeführt. Die vollständigen SQL-Statements sind in der Datei `schema_migration.sql` enthalten.
 Nach dem Anlegen aller Tabellen liegt eine leere, jedoch strukturell vorbereitete SQLite-Datenbank vor, die im nächsten Schritt mit den Datensätzen der MS SQL Server-Datenbank befüllt wird.
 
 ### Unterschiede der Datentypen

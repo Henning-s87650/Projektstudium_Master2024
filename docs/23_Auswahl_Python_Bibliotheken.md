@@ -70,8 +70,8 @@ https://ipyleaflet.readthedocs.io/
 
 leafmap ist eine Python-Bibliothek zur interaktiven Kartenerstellung, die auf ipyleaflet aufbaut und zusätzliche Funktionen für Geodaten-Workflows bereitstellt. Sie wird häufig im Earth-Observation- und Remote-Sensing-Umfeld eingesetzt.
 
-Wu, Q. (2021): *leafmap Documentation*.  
-https://doi.org/10.21105/joss.03414
+Wu, Q. (2024): *leafmap Documentation*.  
+https://leafmap.org/
 
 #### Cartopy
 

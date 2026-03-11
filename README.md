@@ -4,23 +4,16 @@ Projektstudium (Modul G396)
 Studiengang Geoinformatik/Management  
 Hochschule für Technik und Wirtschaft Dresden  
 
----
-
-Dieses Projekt untersucht die Einsatzmöglichkeiten von Python-Open-Source-Bibliotheken zur Verarbeitung und Visualisierung raumbezogener Sachdaten aus relationalen Datenbanken.
-Im Fokus stehen die Migration einer MS-SQL-Server-Datenbank in eine SQLite-/SpatiaLite-Umgebung sowie die funktionale Reproduktion der im Modul *Datenbanktechnologien* entwickelten Aufgaben.
-
-
-
 ## Abstract
 
 Ziel des Projektstudiums ist die Untersuchung, ob und in welcher Qualität Python-basierte Open-Source-Bibliotheken geeignet sind, raumbezogene Sachdaten aus relationalen Datenbanken auszulesen, zu verarbeiten und zu visualisieren.
 
-Als Referenz dient eine im Modul *Datenbanktechnologien* entwickelte MS-SQL-Server-Datenbank. Diese wird in eine SQLite-/SpatiaLite-Umgebung überführt und funktional reproduziert. Auf dieser Grundlage wird ein modular aufgebautes Python-System implementiert, das relationale und räumliche Abfragen ausführt sowie Ergebnisse tabellarisch und kartographisch darstellt.
+Als Referenz dient eine im Modul *Datenbanktechnologien* entwickelte MS SQL Server-Datenbank. Diese wird in eine SQLite-Umgebung überführt und funktional reproduziert. Auf dieser Grundlage wird ein modular aufgebautes Python-System implementiert, das relationale und räumliche Abfragen ausführt sowie Ergebnisse tabellarisch und kartographisch darstellt.
 
 Die Untersuchung umfasst insbesondere:
 
-- die Migration einer relationalen MS-SQL-Server-Datenbank nach SQLite,
-- die Integration räumlicher Funktionalitäten mittels SpatiaLite,
+- die Migration einer relationalen MS SQL Server-Datenbank nach SQLite,
+- die Integration räumlicher Funktionalitäten mittels der SQLite-Erweiterung *SpatiaLite*,
 - die Implementierung modularer Python-Programme zur Datenverarbeitung,
 - die Visualisierung verschiedener Geometrietypen,
 - sowie die Validierung und Bewertung der erzeugten Ergebnisse.
@@ -29,8 +22,8 @@ Die Untersuchung umfasst insbesondere:
 
 Die Umsetzung basiert vollständig auf Open-Source-Technologien:
 
-- SQLite (dateibasiertes relationales Datenbanksystem)
-- SpatiaLite (räumliche Erweiterung für SQLite)
+- SQLite
+- SpatiaLite
 - Python 3
 - pandas
 - GeoPandas
@@ -50,7 +43,7 @@ Details zur Einrichtung sind in Kapitel 5 der Dokumentation beschrieben.
 
 ## Dokumentation
 
-- ### [1 Einleitung](docs/1_Einleintung.md)
+- ### [1 Einleitung](docs/1_Einleitung.md)
 - ### [2 Technische Grundlagen](docs/2_technische_Grundlagen.md)
     - [2.1 Datengrundlage](docs/21_Datengrundlage.md)
     - [2.2 Anforderungsanalyse](docs/22_Anforderungsanalyse.md)
@@ -74,7 +67,7 @@ Details zur Einrichtung sind in Kapitel 5 der Dokumentation beschrieben.
 
 - ### [7 Testen der Software](docs/7_Testen_der_Software.md)
 
-    - [7.1 Testfälle](docs/71_Testfälle.md)
+    - [7.1 Testfälle](docs/71_Testfaelle.md)
     - [7.2 Testergebnisse](docs/72_Testergebnisse.md)
 
 - ### [8 Ergebnisauswertung](docs/8_Ergebnisauswertung.md)
@@ -89,7 +82,7 @@ Projektstudium_Master2024
 ├── data
 │   └── gm23s87650.db
 ├── docs
-│   ├── 1_Einleintung.md
+│   ├── 1_Einleitung.md
 │   ├── 21_Datengrundlage.md
 │   ├── 22_Anforderungsanalyse.md
 │   ├── 23_Auswahl_Python_Bibliotheken.md
@@ -105,44 +98,40 @@ Projektstudium_Master2024
 │   ├── 61_Erweiterung_SQL.md
 │   ├── 62_Erweiterung_Datenverarbeitung.md
 │   ├── 6_Anpassung_Erweiterung.md
-│   ├── 71_Testfälle.md
+│   ├── 71_Testfaelle.md
 │   ├── 72_Testergebnisse.md
 │   ├── 7_Testen_der_Software.md
 │   ├── 8_Ergebnisauswertung.md
 │   ├── 9_Fazit.md
-│   └──  media
+│   └── media
 ├── requirements.txt
-├── src
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   └── __init__.cpython-314.pyc
-│   ├── core
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-314.pyc
-│   │   │   ├── dbparam.cpython-314.pyc
-│   │   │   └── queries.cpython-314.pyc
-│   │   ├── dbparam.py
-│   │   └── queries.py
-│   ├── examples
-│   │   ├── 00_beispiel.py
-│   │   ├── new_queries.py
-│   │   └── tester.py
-│   └── script
-│       ├── 01_geburtstagskalender.py
-│       ├── 02_mitarbieter_wohnort.py
-│       ├── 03_warenwert_gesamtbestand.py
-│       ├── 04_abstand_shops_zur_htw.py
-│       ├── 05_bestand_raeuchertofu.py
-│       ├── 06_abstaende_shops.py
-│       ├── 07_geometrie_darstellen.py
-│       ├── 08_flaeche_bundeslaender.py
-│       ├── 09_shops_und_bundeslaender.py
-│       ├── 11_nachbarn_hessen.py
-│       ├── 12_bestandswert_shops_je_bundesland.py
-│       ├── 13_exklusives_einzugsgebiet.py
-│       ├── __init__.py
-│       └── __pycache__
+├── sql
+│   └── schema_migration.sql
+└── src
+    ├── __init__.py
+    ├── __pycache__
+    ├── core
+    │   ├── __init__.py
+    │   ├── __pycache__
+    │   ├── dbparam.py
+    │   └── queries.py
+    ├── examples
+    │   ├── 00_beispiel.py
+    │   └── new_queries.py
+    └── script
+        ├── 01_geburtstagskalender.py
+        ├── 02_mitarbieter_wohnort.py
+        ├── 03_warenwert_gesamtbestand.py
+        ├── 04_abstand_shops_zur_htw.py
+        ├── 05_bestand_raeuchertofu.py
+        ├── 06_abstaende_shops.py
+        ├── 07_geometrie_darstellen.py
+        ├── 08_flaeche_bundeslaender.py
+        ├── 09_shops_und_bundeslaender.py
+        ├── 10_nachbarn_hessen.py
+        ├── 11_bestandswert_shops_je_bundesland.py
+        ├── __init__.py
+        └── __pycache__
 ```
 
 # Quellenverzeichnis
@@ -178,4 +167,7 @@ Projektstudium_Master2024
 - Cartopy contributors. (2025, 8. August). *Cartopy documentation*, Version 0.20. Abgerufen am 2. Februar 2026, von https://scitools.org.uk/cartopy/
 
 - The Matplotlib development team. (2024, 13. Dezember). *Matplotlib documentation*, Version 3.10.8. Abgerufen am 2. Februar 2026, von https://cartopy.readthedocs.io/stable/
+
+- Qiusheng Wu. (2024, 22 Juli) *leafmap documentation*, Version 0.36.1. Abgerufen am 11.03.2026, von https://leafmap.org/
+
 ---

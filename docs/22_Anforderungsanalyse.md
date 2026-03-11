@@ -16,7 +16,7 @@ Zusätzlich erfolgt eine Differenzierung zwischen Anforderungen an:
 - die **Datenbankebene** (SQLite/SpatiaLite) und  
 - die **Anwendungsebene** (Python-Programme).
 
-Die hier definierten Anforderungen dienen nicht ausschließlich der konzeptionellen Beschreibung des Systems, sondern stellen zugleich die Bewertungsgrundlage für die in [Kapitel 7](72_Testfaelle.md) dargestellten Testfälle dar.
+Die hier definierten Anforderungen dienen nicht ausschließlich der konzeptionellen Beschreibung des Systems, sondern stellen zugleich die Bewertungsgrundlage für die in [Kapitel 7](71_Testfaelle.md) dargestellten Testfälle dar.
 
 ## Anforderungen an die Datenbank
 
