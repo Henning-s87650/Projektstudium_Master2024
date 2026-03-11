@@ -28,13 +28,3 @@ Abschließend wird ein Systementwurf vorgestellt, der die Architektur der Zielum
 
 [2.1 Datengrundlage
  ▶](21_Datengrundlage.md)
-
-
-
-
-
-<div style="display: flex; justify-content: space-between;">
-  <a href="1_Einleitung.md">◀ 1 Einleitung</a>
-  <a href="21_Datengrundlage.md">2.1 Datengrundlage
- ▶</a>
-</div>
