@@ -1,5 +1,7 @@
 [zurück zur Startseite](../README.md)
 
+[◀ 1 Einleitung](1_Einleitung.md)
+
 # 2 technische Grundlagen
 
 Dieses Kapitel definiert den fachlichen und technischen Referenzrahmen der Arbeit. Ziel ist es, die Ausgangssituation zu beschreiben, die Anforderungen an das Zielsystem systematisch abzuleiten und die konzeptionelle Grundlage für die spätere Implementierung und Validierung zu schaffen.
@@ -23,55 +25,16 @@ Abschließend wird ein Systementwurf vorgestellt, der die Architektur der Zielum
 - [2.4 Systementwurf](24_Systementwurf.md)
 
 ---
+
+[2.1 Datengrundlage
+ ▶](21_Datengrundlage.md)
+
+
+
+
+
 <div style="display: flex; justify-content: space-between;">
   <a href="1_Einleitung.md">◀ 1 Einleitung</a>
   <a href="21_Datengrundlage.md">2.1 Datengrundlage
  ▶</a>
 </div>
-
-<hr>
-
-<hr>
-
-<table width="100%">
-<tr>
-<td align="left">
-
-<a href="1_Einleitung.md">◀ 1 Einleitung</a>
-
-</td>
-<td align="right">
-
-<a href="21_Datengrundlage.md">2.1 Datengrundlage ▶</a>
-
-</td>
-</tr>
-</table>
-
-<table>
-  <tr>
-    <td width="50%" align="left">
-      <a href="1_Einleitung.md">◀ 1 Einleitung</a>
-    </td>
-    <td width="50%" align="right">
-      <a href="21_Datengrundlage.md">2.1 Datengrundlage ▶</a>
-    </td>
-  </tr>
-</table>
-
-<p align="left">
-  <a href="1_Einleitung.md">◀ 1 Einleitung</a>
-</p>
-
-<p align="right">
-  <a href="21_Datengrundlage.md">2.1 Datengrundlage ▶</a>
-</p>
-
-<hr>
-
-<p align="left">
-  <a href="VORHERIGE_DATEI.md">◀ Vorheriges Kapitel</a>
-</p>
-<p align="right">
-  <a href="NAECHSTE_DATEI.md">Nächstes Kapitel ▶</a>
-</p>
