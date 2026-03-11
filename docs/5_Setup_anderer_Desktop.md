@@ -1,6 +1,6 @@
 [zurück zur Startseite](../README.md)
 
-# 5 Nutzung der Software auf anderem Desktop
+# 5 Nutzung der Software auf externem Desktop
 
 Dieses Kapitel beschreibt die Voraussetzungen und notwendigen Schritte zur Nutzung
 und Wartung der entwickelten Softwarelösung auf einem anderen Desktop-Rechner.
@@ -10,7 +10,7 @@ zu ermöglichen.
 
 Die entwickelte Softwarelösung ist so aufgebaut, dass sie
 auf anderen Windows-Arbeitsrechnern ausgeführt oder nachgebildet werden kann, sofern die im Kapitel
-*Installation und Setup* beschriebenen Voraussetzungen erfüllt sind.
+[*3 Systemvoraussetzungen und Softwareinstallation*](3_System_und_Installation.md) beschriebenen Voraussetzungen erfüllt sind.
 
 Für die Nutzung auf einem anderen Rechner sind folgende Schritte
 erforderlich:

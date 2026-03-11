@@ -2,7 +2,7 @@
 
 # 6.2 Erweiterung der Datenverarbeitung
 
-Zusätzliche Auswertungen oder Visualisierungen können entweder als eigenständige Python-Skripte umgesetzt oder durch Anpassung bestehender Skripte ergänzt werden. Das Kapitel *3.2.3 Python-Anwendungen für die Sachdatenwiedergabe* dient dafür als Leitfaden. Neben der Nutzung der Datenbankabfrage können die eingelesenen Daten mithilfe von pandas auf Anwendungsebene weiterverarbeitet werden. Zur Demonstration wird der durch das Skript `01_geburtstagskalender.py` erzeugte Geburtstagskalender erweitert.
+Zusätzliche Auswertungen oder Visualisierungen können entweder als eigenständige Python-Skripte umgesetzt oder durch Anpassung bestehender Skripte ergänzt werden. Neben der Nutzung der Datenbankabfrage können die eingelesenen Daten mithilfe von pandas auf Anwendungsebene weiterverarbeitet werden. Zur Demonstration wird der durch das Skript `01_geburtstagskalender.py` erzeugte Geburtstagskalender alternativ umgesetzt.
 
 Das Attribut ``Gebdat``, das als Text im Format ``YYYYMMDD`` vorliegt, wird dabei in separate Spalten für Jahr, Monat und Tag zerlegt. Die hierfür benötigten pandas-Operationen werden nach dem `with`-Block auf den eingelesenen DataFrame angewendet.
 

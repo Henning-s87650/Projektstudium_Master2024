@@ -12,7 +12,7 @@ Zur Demonstration wird eine einfache SELECT-Abfrage ergänzt:
         FROM Mitarbeiter;
     """
 ```
-Wie bereits im Kapitel *3.2.3 Python-Anwendungen für die Sachdatenwiedergabe* beschrieben, wird diese Abfrage im jeweiligen Auswertungsskript über ihren Schlüssel referenziert. Das folgende Beispiel zeigt ein demonstratives Skript namens `00_beispiel.py`:
+Wie bereits im Kapitel [*4.2 Python-Programmierung*](42_Pythonprogrammierung.md) beschrieben, wird diese Abfrage im jeweiligen Auswertungsskript über ihren Schlüssel referenziert. Das folgende Beispiel zeigt ein demonstratives Skript namens `00_beispiel.py`:
 
 ```python
 # Beispiel zur Demonstration des Einbindens zusätzlicher SQL-Statements

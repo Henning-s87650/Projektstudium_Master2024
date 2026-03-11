@@ -2,7 +2,7 @@
 
 # 2.4 Systementwurf
 
-Auf Grundlage der in Abschnitt *2.2 Anforderungsanalyse* definierten Anforderungen wird ein Systementwurf für die Architektur der Zielumgebung entwickelt. Ziel ist es, eine modulare Open-Source-Architektur zu konzipieren, die die zuvor aufgestellten funktionalen und nicht-funktionalen Anforderungen erfüllt.
+Auf Grundlage der in Abschnitt [*2.2 Anforderungsanalyse*](22_Anforderungsanalyse.md) definierten Anforderungen wird ein Systementwurf für die Architektur der Zielumgebung entwickelt. Ziel ist es, eine modulare Open-Source-Architektur zu konzipieren, die die zuvor aufgestellten funktionalen und nicht-funktionalen Anforderungen erfüllt.
 
 Der Systementwurf basiert auf einer klaren Trennung zwischen Datenhaltung, Schnittstelle und Verarbeitungslogik. Diese Struktur unterstützt die Wartbarkeit (NP2), die Nachvollziehbarkeit der Implementierung sowie die spätere Validierung einzelner Komponenten.
 
@@ -34,16 +34,16 @@ Ihre Aufgaben umfassen:
 - Laden der SpatiaLite-Erweiterung  
 - Bereitstellung eines wiederverwendbaren Verbindungsobjekts  
 
-Diese Kapselung trennt die Systemkonfiguration von der fachlichen Datenverarbeitung und ermöglicht eine zentrale Verwaltung systemabhängiger Parameter (z. B. Dateipfade).
+Diese Kapselung trennt die Systemkonfiguration von der fachlichen Datenverarbeitung und ermöglicht eine zentrale Verwaltung systemabhängiger Parameter (Dateipfade).
 
 ### 3. Verwaltung der Verarbeitungsregeln
 
 Die SQL-Anweisungen werden zentral verwaltet und in strukturierter Form (Dictionary) abgelegt.
 
-Jede Abfrage besitzt:
+Jedes Wertepaar im Dictionary besitzt:
 
 - einen eindeutigen Schlüssel  
-- eine klar definierte SQL-Definition  
+- eine zugehörige SQL-Abfrage  
 
 Diese Struktur ermöglicht eine konsistente Wiederverwendung der Abfragen und eine klare Trennung zwischen SQL-Logik und Python-Code.
 

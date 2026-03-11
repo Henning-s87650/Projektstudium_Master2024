@@ -2,7 +2,7 @@
 
 # 4.2 Python-Programmierung
 
-Wie schon im Kapitel *Systementwurf* beschrieben, sind die Python-Anwendungen  modular aufgebaut: Kernfunktionen für den Datenbankzugriff und die Verwaltung der SQL-Anweisungen sind in eigenständigen Modulen gekapselt, während die Datenauswertung als schlanke Skripte implementiert sind, die diese Bausteine lediglich orchestrieren.
+Wie schon im Kapitel [*2.4 Systementwurf*](24_Systementwurf.md) beschrieben, sind die Python-Anwendungen  modular aufgebaut: Kernfunktionen für den Datenbankzugriff und die Verwaltung der SQL-Anweisungen sind in eigenständigen Modulen gekapselt, während die Datenauswertung als schlanke Skripte implementiert sind, die diese Bausteine lediglich orchestrieren.
 
 ## Verbindungslogik zur Datenbank (`dbparam.py`)
 
@@ -70,7 +70,7 @@ In SQLite ist das Laden von Erweiterungsmodulen standardmäßig deaktiviert. Dah
     con.enable_load_extension(True)
     con.load_extension(SPATIALITE_DLL)
 ```
-Auf diese Weise ist jede Verbindung, die `connection()` aufbaut fähig, räumliche Funktionen auf die Datenbank anzuwenden. <br>
+Auf diese Weise ist jede Verbindung, die `connection()` aufbaut fähig, räumliche Funktionen auf die Datenbankinhalte anzuwenden. <br>
 Am Ende der Funktion folgt ein `try`-`finally`-Block mit `yield`-Anweisung.
 ```python
     try:
@@ -155,7 +155,7 @@ Skript separat zu pflegen und sie können bei Bedarf in weiteren Skripten wieder
 ### Anpassung der SQL-Statements für SQLite
 
 Die SQL-Anweisungen entsprechen nicht in allen Fällen ihren ursprünglichen Varianten aus der
-MS-SQL-Server-Umgebung. Grund hierfür sind die im vorherigen Kapitel beretis erwähnten Unterschiede in den SQL-Dialekten von MS SQL-Server und SQLite. Zum Ausdruck kommt dies im Projektkontext durch abweichende Datentypen und fehlende oder anders benannte SQL-Funktionen. 
+MS SQL Server-Umgebung. Grund hierfür sind die im vorherigen Kapitel beretis erwähnten Unterschiede in den SQL-Dialekten von MS SQL Server und SQLite. Zum Ausdruck kommt dies im Projektkontext durch abweichende Datentypen und fehlende oder anders benannte SQL-Funktionen. 
 
 Ein exemplarisches Beispiel ist das Statement `GEBURTSTAGSKALENDER`. Das ursprüngliche Transact-SQL-Statement sieht folgendermaßen aus:
 
@@ -165,14 +165,14 @@ FROM Mitarbeiter
 ORDER BY MONTH(gebdat), DAY(gebdat);
 ```
 
-Dies musste angepasst werden. Zum einen besitzt das Attribut `gebdat` den Datentyp `date`, welcher in SQLite nicht vorhanden ist. Zum anderen werden für das Erstellen des Geburtstagskalenders der Mitarbeiter die Funktionen `MONTH()` und `DAY()` genutzt, welche in SQLite ebenfalls nicht zur Verfügung stehen. Wie im Kapitel *Datenbankmigration* beschrieben, wird `gebdat` in SQLite als `TEXT` im Format `YYYYMMDD` abgebildet. Da es zudem keine Funktionen wie `DAY()` oder `MONTH()` gibt, müssen Monat und Tag aus dem Text extrahiert werden:
+Dieses musste angepasst werden. Zum einen besitzt das Attribut `gebdat` den Datentyp `date`, welcher in SQLite nicht vorhanden ist. Zum anderen werden für das Erstellen des Geburtstagskalenders der Mitarbeiter die Funktionen `MONTH()` und `DAY()` genutzt, welche in SQLite ebenfalls nicht zur Verfügung stehen. Wie im voherigen Kapitel beschrieben, wird `gebdat` in SQLite als `TEXT` im Format `YYYYMMDD` abgebildet. Da es zudem keine Funktionen wie `DAY()` oder `MONTH()` gibt, müssen Monat und Tag aus dem Text extrahiert werden:
 
 ```sql
 CAST(substr(GebDat, 5, 2) AS INTEGER) AS Monat,
 CAST(substr(GebDat, 7, 2) AS INTEGER) AS Tag
 ```
 
-Diese Anpassung ermöglicht es, die fachliche Logik der MS SQL-Server-Aufgabe trotz genannter Abweichungen beizubehalten.
+Diese Anpassung ermöglicht es, die fachliche Logik der MS SQL Server-Aufgabe trotz genannter Abweichungen beizubehalten.
 
 ## Python-Anwendungen für die Sachdatenwiedergabe
 
@@ -189,7 +189,7 @@ Jedes Skript für die tabellarische Ausgabe von Sachdaten besteht im Kern aus vi
     über einen Schlüssel aus dem Dictionary `SQL_QUERIES` in `queries.py`.
 
 2. **Aufbau der Datenbankverbindung**  
-    über die Funktion `connection()` aus `dbparam.py`.
+    über die Funktion `connection()` in `dbparam.py`.
 
 3. **Ausführen der Abfrage und Einlesen der Ergebnisse**  
     über `pandas.read_sql()`, wodurch das Resultset in einen DataFrame überführt wird.
@@ -199,27 +199,8 @@ Jedes Skript für die tabellarische Ausgabe von Sachdaten besteht im Kern aus vi
 
 ### Beispiel: `01_geburtstagskalender.py`
 
-Das folgende Skript demonstriert die Umsetzung dieses Ansatzes:
+Am Beispiel des Skriptes `01_geburtstagskalender.py` wird der oben genannte Ablauf demonstriert.
 
-```python
-#abgeleitet von MS SQL 1 - Aufbau einer OLTP-Datenbank im MS SQL Server - Aufgabe 8
-
-#Import der notwendigen Bibliotheken
-import pandas as pd
-from dbparam import connection
-from queries import SQL_QUERIES
-
-#Abfragen des zugehörigen SQL-Statements aus der Datei "queries.py"
-query = SQL_QUERIES['GEBURTSTAGSKALENDER']
-
-#Einlesen der Ausgabetabelle laut SQL-Statement in einen DataFrame, unter Angabe der Datenbankverbindung
-with connection() as conn:
-    df = pd.read_sql(query, conn)
-
-#Ausgabe des DataFrames im Terminal (mit vorangestellter Textbeschreibung)
-print("\n Die Geburtstage der Mitarbeiter - sortiert nach Monat und Tag:\n")
-print(df)
-```
 Es beginnt mit dem Import des Moduls `pandas`, dem Kontextmanager `connection` as `dbparam.py` und dem Dictionary `SQL_QUERIES` aus `queries.py`.
 
 ```python
@@ -232,7 +213,7 @@ Es folgt die Auswahl des für die Aufgabe benötigten SQL-Statements über desse
 ```python
 query = SQL_QUERIES['GEBURTSTAGSKALENDER']
 ```
-Nun folgt der im Kapitel *5.2.1 Verbindungslogik zur Datenbank (`dbparam.py`)* bereits erwähnte `with`-Block.
+Nun folgt der im obigen Abschnitt zu `dbparam.py` bereits erwähnte `with`-Block.
 
 ```python
 with connection() as conn:
@@ -301,7 +282,7 @@ finally:
     con.close()
 ```
 
-Wie schon im Kapitel *5.2.1 Verbindungslogik zur Datenbank (`dbparam.py`)* erwähnt, spielt es dabei keine Rolle, ob die Ausführung des Inhalts des `with`-Blocks erfolgreich ist. In allen Fällen wird zwingend `con.close()` ausgeführt und die Datenbankverbindung wieder geschlossen.
+Wie schon zuvor erwähnt, spielt es dabei keine Rolle, ob die Ausführung des Inhalts des `with`-Blocks erfolgreich ist. In allen Fällen wird zwingend `con.close()` ausgeführt und die Datenbankverbindung wieder geschlossen.
 
 Schlussendlich wird der `DataFrame` in der Konsole der Entwicklungsumgebung ausgegeben. Dafür werden zwei `print`-Anweisungen genutzt. Die erste dient lediglich einer kurzen Beschreibung der Ausgabe, der zweite gibt schließlich das Ergebnis aus.
 
@@ -370,9 +351,9 @@ Die Verarbeitung gliedert sich in klar getrennte Phasen:
 
 **Anmerkung:** Die zugrundeliegende Aufgabe für dieses Skript (*MS SQL 2 - Aufgabe 9*) verlangt die Darstellung der räumlichen Ergebnisse aller Bundesländer sowie separat für Sachsen. Daher sind zwei SQL-Abfragen integriert und alle Arbeitsschritte werden doppelt ausgeführt.
 
-Da bis zur Arbeitsweise des `with`-Blocks bereits alles im vorhergehenden Kapitel *5.2.3 Python-Anwendungen für die Sachdatenwiedergabe* erläutert wurde, geht dieses Kapitel nur auf die darauffolgenden Schritte ein.
+Da bis zur Arbeitsweise des `with`-Blocks bereits alles im vorhergehenden Abschnitt erläutert wurde, geht dieses Kapitel nur auf die darauffolgenden Schritte ein.
 
-Die Interpretation der Geometriedaten erfordert mehrere Teilschritte. Wie bereits im Kapitel *Datenbankmigration* erwähnt liegen die Geometrien in der neuen Datenbank im SpatiaLite-BLOB-Format vor. Die in diesem Skript genutzte Funktion `wkb.loads()` kann dieses jedoch nicht interpretieren und erwartet ein WKB-Format nach OGC-Standard. Daher sind die  zugrundeliegenden SQL-Statements `INHALT_GEOGRAFIE` und `SELECT_SACHSEN` folgendermaßen angepasst (demonstriert am Beispiel `INHALT_GEOGRAFIE`):
+Die Interpretation der Geometriedaten erfordert mehrere Teilschritte. Wie bereits im Kapitel [*4.1 Datenbankmigration*](41_Migration.md) erwähnt liegen die Geometrien in der neuen Datenbank im SpatiaLite-BLOB-Format vor. Die in diesem Skript genutzte Funktion `wkb.loads()` kann dieses jedoch nicht interpretieren und erwartet ein WKB-Format nach OGC-Standard. Daher sind die  zugrundeliegenden SQL-Statements `INHALT_GEOGRAFIE` und `SELECT_SACHSEN` folgendermaßen angepasst (demonstriert am Beispiel `INHALT_GEOGRAFIE`):
 
 ```sql
 SELECT

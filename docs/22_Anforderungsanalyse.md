@@ -2,7 +2,7 @@
 
 # 2.2 Anforderungsanalyse
 
-Ziel der Anforderungsanalyse ist die Definition des Leistungsumfangs, den die Zielumgebung aus SQLite, SpatiaLite und Python erfüllen muss, um als fachlich gleichwertig zur Referenzdatenbank in Microsoft SQL Server zu gelten. Die Anforderungen werden aus den im Modul *Datenbanktechnologien* bearbeiteten Übungsaufgaben abgeleitet. Diese Aufgaben definieren die funktionalen Eigenschaften der ursprünglichen MS-SQL-Server-Datenbank und bilden damit den Maßstab für die Reproduktion im Open-Source-System.
+Ziel der Anforderungsanalyse ist die Definition des Leistungsumfangs, den die Zielumgebung aus SQLite und Python erfüllen muss, um als fachlich gleichwertig zur Referenzdatenbank in MS SQL Server zu gelten. Die Anforderungen werden aus den im Modul *Datenbanktechnologien* bearbeiteten Übungsaufgaben abgeleitet. Diese Aufgaben definieren die funktionalen Eigenschaften der ursprünglichen MS SQL Server-Datenbank und bilden damit den Maßstab für die Reproduktion im Open-Source-System.
 
 Zur systematischen Strukturierung werden die Anforderungen in:
 
@@ -16,11 +16,11 @@ Zusätzlich erfolgt eine Differenzierung zwischen Anforderungen an:
 - die **Datenbankebene** (SQLite/SpatiaLite) und  
 - die **Anwendungsebene** (Python-Programme).
 
-Die hier definierten Anforderungen dienen nicht ausschließlich der konzeptionellen Beschreibung des Systems, sondern stellen zugleich die Bewertungsgrundlage für die in [Kapitel 7](72_Testfälle.md) dargestellten Testfälle dar.
+Die hier definierten Anforderungen dienen nicht ausschließlich der konzeptionellen Beschreibung des Systems, sondern stellen zugleich die Bewertungsgrundlage für die in [Kapitel 7](72_Testfaelle.md) dargestellten Testfälle dar.
 
 ## Anforderungen an die Datenbank
 
-Die Anforderungen an die Datenbank definieren die strukturelle und funktionale Reproduzierbarkeit der Referenzumgebung auf Schema- und SQL-Ebene. Sie legen fest, welche Eigenschaften die SQLite-/SpatiaLite-Datenbank aufweisen muss, um die fachlichen Aufgaben der MS-SQL-Server-Datenbank gleichwertig abbilden zu können.
+Die Anforderungen an die Datenbank definieren die strukturelle und funktionale Reproduzierbarkeit der Referenzumgebung auf Schema- und SQL-Ebene. Sie legen fest, welche Eigenschaften die SQLite-Datenbank aufweisen muss, um die fachlichen Aufgaben der MS SQL Server-Datenbank gleichwertig abbilden zu können.
 
 ### Funktionale Anforderungen an die Datenbank
 
@@ -75,7 +75,7 @@ Die nicht-funktionalen Anforderungen betreffen die strukturelle und inhaltliche 
 
 #### ND1 – Tabellenstruktur
 
-Die Tabellenstruktur der Referenzdatenbank muss vollständig reproduziert werden. Alle relevanten Tabellen müssen im Zielsystem vorhanden sein.
+Die Tabellenstruktur der Referenzdatenbank muss vollständig reproduziert werden. Alle Tabellen müssen im Zielsystem vorhanden sein.
 
 #### ND2 – Relationen und Schlüssel
 
@@ -93,7 +93,7 @@ Die Tabellendaten der SQLite-Datenbank müssen inhaltlich mit der Referenzdatenb
 | ND2 | Relationen | Korrekte Abbildung von PK- und FK-Beziehungen |
 | ND3 | Inhaltliche Übereinstimmung | Identische Datenbestände im Zielsystem |
 
-## Anforderungen an die Python-Programme
+## Anforderungen an die Python-Anwendungen
 
 Die Python-Anwendungen bilden die Schnittstelle zwischen Datenbank und Nutzer. Ziel ist es, die in der Referenzumgebung ausgeführten SQL-Abfragen über Python reproduzierbar auszuführen und die Ergebnisse fachlich korrekt darzustellen.
 
@@ -105,9 +105,9 @@ Die Verarbeitung der Daten erfolgt primär über SQL. Python übernimmt dabei:
 - die tabellarische Ausgabe sowie
 - die Visualisierung räumlicher Daten.
 
-###   Funktionale Anforderungen an die Python-Programme
+###   Funktionale Anforderungen an die Python-Anwendungen
 
-Die funktionalen Anforderungen an das Python-Programm leiten sich aus dem Projektziel, sowie aus den durchgeführten Aufgaben der MS-SQL-Praktika ab. Sie beschreiben die Fähigkeiten, die das Python-System besitzen muss, um die Daten aus der migrierten SQLite-/SpatiaLite-Datenbank auszugeben und die Ergebnisse analog zur ursprünglichen SQL-Server-Umgebung darzustellen.
+Die funktionalen Anforderungen an das Python-Programm leiten sich aus dem Projektziel, sowie aus den durchgeführten Aufgaben der MS SQL Server-Praktika ab. Sie beschreiben die Fähigkeiten, die das Python-System besitzen muss, um die Daten aus der migrierten SQLite-Datenbank auszugeben und die Ergebnisse analog zur ursprünglichen SQL-Server-Umgebung darzustellen.
 
 #### FP1 – Datenbankverbindung
 
@@ -123,7 +123,7 @@ SQL-Statements müssen aus Python heraus ausgeführt werden können. Dies umfass
 
 #### FP4 – Einlesen gefilterter Datenlagen
 
-Gefilterte Resultsets müssen in geeignete Datenstrukturen (z. B. DataFrames) überführt werden können.
+Gefilterte Resultsets müssen in geeignete Datenstrukturen überführt werden können.
 
 #### FP5 – Tabellarische Darstellung von Sachdaten
 
@@ -133,7 +133,7 @@ Die Ergebnisse nicht-räumlicher Abfragen müssen strukturiert und nachvollziehb
 
 Geometrien müssen aus dem Datenbanksystem ausgelesen, interpretiert und grafisch dargestellt werden können.
 
-### Übersicht funktionale Anforderungen an die Python-Programme
+### Übersicht funktionale Anforderungen an die Python-Anwendungen
 
 | Nummer | Anforderung | Beschreibung |
 |--------|------------|--------------|
@@ -144,9 +144,9 @@ Geometrien müssen aus dem Datenbanksystem ausgelesen, interpretiert und grafisc
 | FP5 | Tabellarische Ausgabe | Strukturierte Darstellung von Sachdaten |
 | FP6 | Visualisierung | Grafische Darstellung von Geometrien |
 
-### Nicht-funktionale Anforderungen an die Python-Programme
+### Nicht-funktionale Anforderungen an die Python-Anwendungen
 
-Die nicht-funktionalen Anforderungen betreffen Eigenschaften der Python-Lösung, die über die reine Funktionserfüllung hinausgehen.
+Die nicht-funktionalen Anforderungen betreffen Eigenschaften der Python-Anwendungen, die über die reine Funktionserfüllung hinausgehen.
 
 #### NP1 – Open-Source-Basis
 

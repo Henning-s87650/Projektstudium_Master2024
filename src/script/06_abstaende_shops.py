@@ -6,7 +6,7 @@ from src.core.dbparam import connection
 from src.core.queries import SQL_QUERIES
 
 #Abfragen des zugehörigen SQL-Statements aus der Datei "queries.py"
-query = SQL_QUERIES['ABSTAENDE_SHOPS']
+query = SQL_QUERIES['ABSTAND_SHOPS_ZUR_HTW']
 
 #Einlesen der Ausgabetabelle laut SQL-Statement in einen DataFrame, unter Angabe der Datenbankverbindung
 with connection() as conn:

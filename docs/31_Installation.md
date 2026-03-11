@@ -30,7 +30,7 @@ Für die Ausführung der Python-Skripte ist eine lokale Python-Installation erfo
 
 ###   Installation weiterer Python-Bibliotheken
 
-Das Installieren der benötigten Bibliotheken geschieht mit der Eingabeaufforderung durch das Ausführen des folgenden Befehls:
+Das Installieren der benötigten Bibliotheken geschieht mit der Windows Eingabeaufforderung durch das Ausführen des folgenden Befehls:
 
 ```console
  pip install pandas geopandas shapely matplotlib

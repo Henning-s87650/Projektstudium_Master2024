@@ -4,9 +4,9 @@
 
 Dieses Kapitel definiert den fachlichen und technischen Referenzrahmen der Arbeit. Ziel ist es, die Ausgangssituation zu beschreiben, die Anforderungen an das Zielsystem systematisch abzuleiten und die konzeptionelle Grundlage für die spätere Implementierung und Validierung zu schaffen.
 
-Als Referenz dient die im Modul Datenbanktechnologien entwickelte MS-SQL-Server-Datenbank. Ihre Tabellenstruktur, Datentypen, Relationen sowie die im Rahmen der Übungen realisierten SQL- und Geodatenabfragen definieren den funktionalen Leistungsumfang, den die Open-Source-Zielumgebung reproduzieren soll.
+Als Referenz dient die im Modul Datenbanktechnologien entwickelte MS SQL Server-Datenbank. Ihre Tabellenstruktur, Datentypen, Relationen sowie die im Rahmen der Übungen realisierten Sach- und Geodatenabfragen definieren den funktionalen Leistungsumfang, den die Open-Source-Zielumgebung reproduzieren soll.
 
-Aus dieser Referenz werden funktionale und nicht-funktionale Anforderungen abgeleitet. Diese Anforderungen konkretisieren, welche Eigenschaften die SQLite-/SpatiaLite-Datenbank sowie die Python-basierte Auswertungsumgebung erfüllen müssen, um eine fachliche Gleichwertigkeit zur Referenzumgebung zu erreichen. Sie bilden damit die Bewertungsgrundlage für die spätere Testkonzeption und Ergebniseinordnung.
+Aus dieser Referenz werden funktionale und nicht-funktionale Anforderungen abgeleitet. Diese Anforderungen konkretisieren, welche Eigenschaften die SQLite-Datenbank sowie die Python-basierte Auswertungsumgebung erfüllen müssen, um eine fachliche Gleichwertigkeit zur Referenzumgebung zu erreichen. Sie bilden damit die Bewertungsgrundlage für die spätere Testkonzeption und Ergebniseinordnung.
 
 Auf Basis der Anforderungsanalyse erfolgt die Auswahl geeigneter Python-Bibliotheken. Die Bewertung orientiert sich an der Fähigkeit der Bibliotheken, relationale und räumliche Daten aus SQLite auszulesen, zu verarbeiten und zu visualisieren.
 

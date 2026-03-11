@@ -6,7 +6,7 @@ Die folgenden Tabellen listen die definierten Testfälle auf. Jeder Testfall ist
 
 ### Testfälle zur Überprüfung der Datenbankmigration
 
-Die folgenden Testfälle prüfen, ob die Migration der ursprünglichen MS-SQL-Server-Datenbank nach SQLite/SpatiaLite strukturell und datenbezogen korrekt durchgeführt wurde. Dabei wird überprüft, ob alle Tabellen vorhanden sind, die Primärschlüsselstrukturen korrekt übernommen wurden und die Anzahl der Datensätze mit der Referenzdatenbank übereinstimmt.
+Die folgenden Testfälle prüfen, ob die Migration der ursprünglichen MS SQL Server-Datenbank nach SQLite strukturell und datenbezogen korrekt durchgeführt wurde. Dabei wird überprüft, ob alle Tabellen vorhanden sind, die Primärschlüsselstrukturen korrekt übernommen wurden und die Anzahl der Datensätze mit der Referenzdatenbank übereinstimmt.
 
 | Test-ID | Kategorie | Ziel / Prüfpunkt | Referenzierte Anforderungen | Vergleichskriterium |
 |---|---|---|---|---|
@@ -24,7 +24,7 @@ Die folgenden Testfälle überprüfen die Integrität der übertragenen Daten. I
 | T05 | Integrität | PK eindeutig (zus.) | ND2 | 0 Duplikate |
 | T06 | Integrität | FK-Orphans | ND2 | 0 Orphans |
 
-### Testfälle zur Überprüfung der Daten
+### Testfälle zur Überprüfung der Datenabfragen
 
 Diese Testfälle prüfen die fachliche Korrektheit der Datenabfragen sowie der räumlichen Berechnungen. Dazu werden ausgewählte SQL-Abfragen und räumliche Analysen ausgeführt und mit den Ergebnissen der Referenzumgebung verglichen. Je nach Testfall erfolgt der Vergleich über identische Ergebnismengen oder über toleranzbasierte Übereinstimmungen bei räumlichen Berechnungen.
 
@@ -33,9 +33,9 @@ Diese Testfälle prüfen die fachliche Korrektheit der Datenabfragen sowie der r
 | T07 | Sachdaten | Geburtstagskalender | FD4, FP3, FP5 | gleiche Reihenfolge |
 | T08 | Sachdaten | Join Mitarbeiter–Shop | FD4, FP3, FP4 | gleiche Ergebnismenge |
 | T09 | Sachdaten | Aggregation / View | FD4, FP3 | gleiche Summen |
-| T10 | Sachdaten | Verkauf Filter / Aggregat | FD4, FP3 | gleiche Werte |
+| T10 | Sachdaten | Verkauf Filter / Aggregat | FD4, FP3 | gleiche Wertepaare |
 | T11 | Räumlich | Geometrien nicht NULL | FD1 | COUNT NULL | identisch / 0 |
-| T12 | Räumlich | Shops in Bundesland | FD2, FP3 | räumliche Query | gleiche Shop-Liste |
+| T12 | Räumlich | Shops in Bundesland | FD2, FP3 | UNION-Statement | gleiche grafische Ausgabe |
 | T13 | Räumlich | Nachbar-Bundesländer | FD2, FP3 | gleiche Liste |
 | T14 | Räumlich | Flächenberechnung BL | FD3, FP3 | innerhalb Toleranz |
 | T15 | Räumlich | Distanz Shop–HTW | FD3, FP3 | innerhalb Toleranz |

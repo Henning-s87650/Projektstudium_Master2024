@@ -7,7 +7,7 @@ das neue Zielsystem überführt wurde. Diese Prüfung dient der Validierung der 
 Integrität der migrierten Datenbank und entspricht den Testfällen **T01 (Vorhandensein der
 Tabellen)** und **T02 (Primärschlüsseldefinitionen)**.
 
-Für die schematische Analyse wird ein ER-Diagramm der SQLite-Datenbank herangezogen. Da SQLite
+Für die schematische Analyse wird ein Entity-Relationship-Diagramm (ER-Diagramm) der SQLite-Datenbank herangezogen. Da SQLite
 keine native Funktion zur Generierung von ER-Diagrammen bereitstellt, wird hierfür eine
 Drittsoftware eingesetzt. Zum Einsatz kommt die **DBeaver Community Edition**, ein Open-Source-Client
 zur Verwaltung verschiedener Datenbanksysteme. Alternativ können auch andere Werkzeuge verwendet
@@ -23,15 +23,15 @@ Beziehung im ER-Diagramm werden die beteiligten Attribute sowie deren Kardinalit
 ![ER-Diagramm mit gewählter Beziehung](media/ER_Diagramm_Beziehung.png)
 
 Das ER-Diagramm zeigt, dass das Schema der SQLite-Datenbank – mit Ausnahme der Datentypen –
-strukturell identisch zur ursprünglichen Datenbank in Microsoft SQL Server ist. Insbesondere sind
+strukturell identisch zur ursprünglichen Datenbank in MS SQL Server ist. Insbesondere sind
 alle Tabellen vorhanden, die Primärschlüssel korrekt definiert und die Fremdschlüsselrelationen
 vollständig abgebildet. Damit gelten die Testfälle **T01** und **T02** als erfolgreich
 durchgeführt.
 
 ## Referenzdaten
 
-Als Referenz dienen die Ergebnisse der im Modul *Datenbanktechnologien* durchgeführten Übungen in
-Microsoft SQL Server (MS SSMS). Für jeden Testfall wird eine fachlich äquivalente Abfrage in der
+Als Referenz dienen die Ergebnisse der im Modul *Datenbanktechnologien* durchgeführten Übungen mit
+MS SSMS. Für jeden Testfall wird eine fachlich äquivalente Abfrage in der
 neuen Umgebung (SQLite/SpatiaLite und Python) ausgeführt und mit dem Resultat aus MS SSMS verglichen.
 
 Der Vergleich erfolgt abhängig vom Testtyp über:
@@ -230,9 +230,7 @@ SELECT
 FROM Bestand;
 ```
 
-Der Vergleich enthält neben der Zeilenanzahl auch die Anzahl eindeutiger
-Primärschlüsselkombinationen (*Artnr*, *Shop_ID*), wodurch die Eindeutigkeit des
-zusammengesetzten Primärschlüssels überprüft wird. Zusätzlich werden zentrale
+Zusätzlich werden zentrale
 Kennzahlen des Attributs *Menge* (Minimum, Maximum und Summe) sowie die Anzahl
 möglicher `NULL`-Werte ermittelt.
 
@@ -340,11 +338,11 @@ davon auszugehen, dass die Tabelle *Verkauf* vollständig, konsistent und ohne V
 zusammengesetzten Primärschlüssels in das Zielsystem übertragen wurde. Die Testfälle **T03**
 und **T05** gelten für diese Tabelle als erfolgreich durchgeführt.
 
-## Validierung der Tabelle Geografie
+## Validierung der Tabelle *Geografie*
 
-Die Validierung der Tabelle *Geografie* erfolgt getrennt von der Implementierung und dient der
+Die Validierung der Tabelle *Geografie* dient der
 Überprüfung, ob die räumlichen und attributiven Inhalte der Tabelle vollständig und konsistent
-von der Referenzdatenbank in Microsoft SQL Server nach SQLite/SpatiaLite übertragen wurden.
+von der Referenzdatenbank in Microsoft SQL Server nach SQLite übertragen wurden.
 Da es sich um eine Geodatentabelle handelt, kombiniert die Prüfung quantitative Kennzahlen mit
 einer räumlichen Plausibilitätskontrolle.
 
@@ -427,11 +425,11 @@ Die visuelle Kontrolle bestätigt, dass alle vorhandenen Flächengeometrien korr
 werden und die räumliche Lage der Bundesländer den fachlichen Erwartungen entspricht. Der
 Datensatz ohne Geometrie wird erwartungsgemäß nicht visualisiert.
 
-## Validierung der Tabelle Shop
+## Validierung der Tabelle *Shop*
 
 Die Validierung der Tabelle *Shop* dient der Überprüfung, ob die attributiven Inhalte sowie die
 punktförmigen Geometrien der Shops vollständig und konsistent von der Referenzdatenbank in
-Microsoft SQL Server nach SQLite/SpatiaLite übertragen wurden. Analog zur Tabelle *Geografie*
+Microsoft SQL Server nach SQLite übertragen wurden. Analog zur Tabelle *Geografie*
 erfolgt die Prüfung durch eine Kombination aus quantitativer Kennzahlenanalyse und räumlicher
 Plausibilitätskontrolle.
 
@@ -464,9 +462,9 @@ FROM Shop;
 ```
 
 Der Vergleich umfasst die Gesamtanzahl der Datensätze sowie die Anzahl eindeutiger
-Primärschlüsselwerte (Shop_ID), womit die Eindeutigkeit des Primärschlüssels überprüft wird.
+Primärschlüsselwerte (*Shop_ID*), womit die Eindeutigkeit des Primärschlüssels überprüft wird.
 Darüber hinaus wird die Anzahl von Datensätzen ohne zugeordnete Punktgeometrie ermittelt.
-Da jeder Shop fachlich eindeutig lokalisiert sein muss, wird erwartet, dass keine
+Da jeder Shop eindeutig lokalisiert sein muss, wird erwartet, dass keine
 NULL-Geometrien vorliegen.
 
 
@@ -479,7 +477,7 @@ NULL-Geometrien vorliegen.
 | `cnt_ort`         | 20 | 20 |
 
 Die ermittelten Kennzahlen stimmen zwischen MS SSMS und SQLite vollständig überein. Damit ist davon auszugehen, dass die Tabelle Shop vollständig und konsistent in das Zielsystem
-übertragen wurde. Die Testfälle T01, T03 und T11 gelten für diese Tabelle als
+übertragen wurde. Die Testfälle **T01**, **T03** und **T11** gelten für diese Tabelle als
 erfolgreich durchgeführt.
 
 ### Räumliche Plausibilitätsprüfung
@@ -487,7 +485,7 @@ erfolgreich durchgeführt.
 Ergänzend zur quantitativen Analyse wird eine visuelle Prüfung der Punktgeometrien vorgenommen.
 Hierfür wird die Tabelle *Shop* in derselben GIS-Umgebung geladen, die bereits für die Validierung
 der Tabelle *Geografie* verwendet wurde. Die Shops werden gemeinsam mit den Flächengeometrien der
-Bundesländer dargestellt, um ihre räumliche Lage fachlich einordnen zu können.
+Bundesländer dargestellt, um ihre räumliche Lage einordnen zu können.
 
 ![ER-Diagramm mit gewählter Beziehung](media/Shops_QGIS.png)
 
@@ -605,8 +603,8 @@ Datensätzen Aggregatfunktionen überprüft werden.
 ### T09 – Aggregation von Sachdaten (Gruppierung)
 
 Ziel dieses Testfalls ist die Validierung einer fachlich äquivalenten
-Aggregationsabfrage zwischen der Referenzumgebung (Microsoft SQL Server, MS SSMS)
-und der Zielumgebung (SQLite in Kombination mit Python). Untersucht wird, ob das
+Aggregationsabfrage zwischen der Referenz-
+und Zielumgebung. Untersucht wird, ob das
 System in der Lage ist, Aggregatfunktionen und Gruppierungen auf korrekt
 verknüpften Datensätzen auszuführen und aggregierte Sachdaten reproduzierbar
 bereitzustellen.
@@ -634,8 +632,7 @@ Für den Vergleich gelten folgende Kriterien:
 - identische Gruppierungsschlüssel (Bundesländer),
 - Übereinstimmung der berechneten Aggregatwerte je Gruppe.
 
-Zur Durchführung des Testfalls wird in der Referenzumgebung Microsoft SQL Server
-Management Studio (MS SSMS) der zuvor angelegte View abgefragt, welcher die
+Zur Durchführung des Testfalls wird in der Referenzumgebung (MS SSMS) der zuvor angelegte View abgefragt, welcher die
 aggregierten Bestandswerte je Bundesland bereitstellt. In der Zielumgebung
 SQLite wird die fachlich äquivalente Aggregationsabfrage über ein
 Python-Auswertungsskript ausgeführt, das die SQL-Anweisung an die Datenbank
@@ -669,8 +666,7 @@ Sachdatenfunktionen ab.
 
 ### T10 – Darstellung von Flächengeometrien
 
-Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung (SQLite in
-Kombination mit SpatiaLite und Python) in der Lage ist, gespeicherte
+Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung in der Lage ist, gespeicherte
 Flächengeometrien korrekt auszulesen, zu interpretieren und visuell darzustellen.
 Der Testfall dient dem Nachweis einer grundlegenden räumlichen Kernfunktionalität
 und bildet die Voraussetzung für nachfolgende räumliche Abfragen und
@@ -686,7 +682,7 @@ Datenbank auszulesen, in ein geeignetes Geometrieformat zu überführen und
 visuell darzustellen.
 
 Die im Skript verwendeten SQL-Abfragen liefern neben attributiven Informationen
-die Flächengeometrien im Well-Known-Binary-Format (WKB). Die Geometrien werden im
+die Flächengeometrien im WKB-Format. Die Geometrien werden im
 Anschluss im Arbeitsspeicher mithilfe der Bibliothek *Shapely* interpretiert und
 in GeoDataFrames überführt.
 
@@ -711,63 +707,39 @@ verarbeiten und visualisieren kann.
 Damit ist nachgewiesen, dass die grundlegende Verarbeitung und Darstellung
 räumlicher Daten in der Zielumgebung möglich ist.
 
-### T11 – Räumliche Selektion: Punkt-in-Polygon
+### T11 – Shops in Bundesland: UNION-Satement
 
-Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung (SQLite in
-Kombination mit SpatiaLite und Python) in der Lage ist, räumliche Prädikate
-korrekt anzuwenden. Konkret wird untersucht, ob Punktgeometrien (Shops) anhand
-einer Flächengeometrie (Bundesland) räumlich selektiert werden können
-(Punkt-in-Polygon-Abfrage).
+Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung in der Lage ist, räumliche Prädikate
+korrekt anzuwenden. Konkret wird untersucht, ob Punktgeometrien (Shops) und Flächengeometrien (Bundesland) parallel lagegenau dargestellt werden können.
 
 Der Testfall adressiert die funktionalen Anforderungen **FD2 (Räumliche
 Abfragen)** sowie **FP3 (Ausführung von SQL-Anweisungen)**.
 
 Aufbauend auf dem Testfall **T10**, in dem nachgewiesen wurde, dass
 Flächengeometrien korrekt aus der Datenbank gelesen und dargestellt werden
-können, wird in diesem Testfall erstmals eine räumliche Funktion angewendet.
+können, wird in diesem Testfall untersucht, ob zwei Geometrietypen lagegeanu zueinader dargestellt werden können.
 Dabei wird geprüft, ob die räumliche Beziehung zwischen Punkt- und
-Flächengeometrien fachlich korrekt ausgewertet wird.
+Flächengeometrien fachlich korrekt dargestellt wird.
 
-Als fachliche Referenz dient eine räumliche Abfrage in der Referenzumgebung
-Microsoft SQL Server (MS SSMS), bei der alle Shops ermittelt werden, deren
-Punktgeometrie innerhalb der Fläche eines ausgewählten Bundeslands liegt. In
-der Zielumgebung wird eine fachlich äquivalente Abfrage mithilfe der
-SpatiaLite-Funktionen ausgeführt.
+Als fachliche Referenz dient die Lösung der Aufgabe 11 des Übungsblattes *MS SQL 2 – Verwaltung geografischer Informationen* in der folgendes verlangt wird:
 
-Verglichen werden die Resultsets beider Systeme mit dem Ziel, sicherzustellen,
-dass die räumliche Selektion identische Shops liefert.
+*Ordnen Sie die Shops den jeweiligen Bundesländern zu. Lassen Sie sich die Bundesländer und die jeweiligen Shops anzeigen (UNION ALL). Machen Sie die Punkte der Shops unter Nutzung der Methode STBuffer sichtbar.*
 
-Für den Vergleich gelten folgende Kriterien:
-
-- identische Anzahl der selektierten Shops,
-- identische Menge der ermittelten `Shop_ID`,
-- Übereinstimmung der zugehörigen attributiven Informationen je Datensatz.
-
-Zur Durchführung des Testfalls wird in beiden Systemen eine räumliche
-Punkt-in-Polygon-Abfrage ausgeführt. In der Zielumgebung erfolgt die Ausführung
+In der Zielumgebung erfolgt die Ausführung
 über ein Python-Skript, welches die SQL-Anweisung an die Datenbank übermittelt
-und die Ergebnisse tabellarisch ausgibt.
-
-Da die Reihenfolge der Ergebniszeilen ohne explizite `ORDER BY`-Klausel nicht
-deterministisch ist, stellt sie kein Vergleichskriterium dar. Der Vergleich
-erfolgt mengenbasiert anhand der ermittelten `Shop_ID`.
+und die Ergebnisse tabellarisch ausgibt (``09_shops_und_bundeslaender.py``).
 
 ![Aggregierter Gesamtbestand je Bundesland (SQLite / Python-Ausgabe)](media/Shops_Bundeslaender.png)
 
-Die Resultsets beider Systeme liefern identische Mengen an Shops innerhalb des
-ausgewählten Bundeslands. Abweichungen in der Anzahl oder in der Zuordnung der
-Shops konnten nicht festgestellt werden.
+Die Zielumgebung ist, wie die Referenzumgebung, fähig die Lage der Shops in den jeweiligen Bundesländern darzustellen. Damit ist nachgewiesen, dass SQLite räumliche
+Beziehungen korrekt darstellen kann.
 
-Damit ist nachgewiesen, dass die Zielumgebung SQLite/SpatiaLite räumliche
-Punkt-in-Polygon-Abfragen fachlich korrekt ausführen kann.
-
-Der Testfall **T11 – Räumliche Selektion: Punkt-in-Polygon** gilt somit als
+Der Testfall **T11 – Shops in Bundesland: UNION-Satement** gilt somit als
 erfolgreich durchgeführt.
 
 ### T12 – Räumliche Berechnung: Flächenberechnung von Bundesländern
 
-Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung (SQLite in
-Kombination mit SpatiaLite und Python) in der Lage ist, räumliche Berechnungen
+Ziel dieses Testfalls ist die Überprüfung, ob die Zielumgebung in der Lage ist, räumliche Berechnungen
 auf Flächengeometrien korrekt durchzuführen. Konkret wird untersucht, ob die
 Flächen der Bundesländer auf Basis ihrer Polygongeometrien berechnet werden
 können und fachlich plausible sowie mit der Referenzumgebung vergleichbare
@@ -783,10 +755,10 @@ Verarbeitung und Darstellung von Flächengeometrien nachgewiesen wurde, sowie
 Berechnung durchgeführt.
 
 Als fachliche Referenz dient die Flächenberechnung in der Referenzumgebung
-Microsoft SQL Server (MS SSMS), bei der die Flächen der Bundesländer auf Basis
+MS SSMS, bei der die Flächen der Bundesländer auf Basis
 der gespeicherten Geometrien berechnet werden. In der Zielumgebung erfolgt die
 fachlich äquivalente Berechnung mithilfe von SpatiaLite-Funktionen, wobei die
-Ergebnisse über ein Python-Skript tabellarisch ausgegeben werden.
+Ergebnisse über ein Python-Skript (`08_flaeche_bundeslaender.py`) tabellarisch ausgegeben werden.
 
 Verglichen werden die Resultsets beider Systeme mit dem Ziel, sicherzustellen,
 dass die berechneten Flächenwerte fachlich übereinstimmen.
@@ -831,7 +803,7 @@ Der Testfall adressiert die funktionalen Anforderungen **FD3 (Räumliche
 Berechnungen)** sowie **FP3 (Ausführung von SQL-Anweisungen)**.
 
 Aufbauend auf den vorherigen Testfällen **T10** (Darstellung von
-Flächengeometrien), **T11** (räumliche Selektion) und **T12**
+Flächengeometrien), **T11** (UNION-Satement) und **T12**
 (Flächenberechnung) wird in diesem Testfall geprüft, ob die Zielumgebung auch
 punktbasierte räumliche Operationen korrekt durchführen kann.
 
@@ -839,17 +811,17 @@ Als fachliche Referenz dient die Lösung einer Übungsaufgabe aus dem Modul
 *Datenbankentechnologien* (*MS SQL 2 – Verwaltung geografischer Informationen*),
 in der ein fester Referenzpunkt (HTW Dresden) als Geometrie erzeugt und die
 Entfernung aller Shops zu diesem Punkt berechnet wird. Die Ergebnisse dieser
-Berechnung in Microsoft SQL Server (MS SSMS) bilden den Maßstab für die
+Berechnung in MS SSMS bilden den Maßstab für die
 Validierung der Zielumgebung.
 
 In der Zielumgebung wird der Referenzpunkt aus seinen geografischen Koordinaten
 (Längen- und Breitengrad) mithilfe der Funktion `MakePoint()` als
-Punktgeometrie im Koordinatenreferenzsystem EPSG:4326 erzeugt. Um eine
+Punktgeometrie im geographischen Referenzsystem WGS84 (EPSG:4326) erzeugt. Um eine
 Distanzberechnung in Metern zu ermöglichen, werden sowohl die Shop-Koordinaten
 als auch der Referenzpunkt vor der Berechnung in das metrische
 Koordinatenreferenzsystem ETRS89 / UTM Zone 32N (EPSG:25832) transformiert. Die
 Distanzberechnung erfolgt anschließend mit `ST_Distance()` auf den projizierten
-Punktgeometrien.
+Punktgeometrien. Dieser Prozess entspricht der Ausführung des Skriptes `06_abstand_shops_zur_htw.py`
 
 Verglichen werden die Resultsets der Referenz- und Zielumgebung mit dem Ziel,
 sicherzustellen, dass die berechneten Distanzen fachlich übereinstimmen.
@@ -880,7 +852,7 @@ was den erwarteten numerischen Unterschieden zwischen geodätischer und
 projizierter Berechnung entspricht. Fachlich relevante Abweichungen konnten
 nicht festgestellt werden.
 
-Damit ist nachgewiesen, dass die Zielumgebung SQLite/SpatiaLite in der Lage ist,
+Damit ist nachgewiesen, dass die Zielumgebung SQLite in der Lage ist,
 einen externen Referenzpunkt korrekt als Geometrie zu erzeugen, räumlich in das
 bestehende Datenmodell einzubinden und darauf aufbauend Distanzberechnungen
 fachlich korrekt und mit ausreichender numerischer Genauigkeit
@@ -891,7 +863,7 @@ Distanzberechnung** gilt somit als erfolgreich durchgeführt.
 
 ---
 <div style="display: flex; justify-content: space-between;">
-  <a href="71_Testfälle.md">◀ 7.1 Testfälle</a>
+  <a href="71_Testfaelle.md">◀ 7.1 Testfälle</a>
   <a href="8_Ergebnisauswertung.md">8 Ergebnisauswertung
  ▶</a>
 </div>
