@@ -1,6 +1,6 @@
 [🏠 zurück zur Startseite](../README.md)
 
-[◀ 6 Anpassung und Erweiterung der Software](6_Anpassung_Erweiterung.md)
+[◀ 6.1 Erweiterung der SQL-Verwaltung](62_Erweiterung_Datenverarbeitung.md)
 
 # 6.2 Erweiterung der Datenverarbeitung
 

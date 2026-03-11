@@ -2,7 +2,7 @@
 
 [◀ 8 Ergebnisauswertung](8_Ergebnisauswertung.md)
 
-# Fazit
+# 9 Fazit
 
 Ziel des Projektstudiums war die Untersuchung der Einsatzmöglichkeiten von Python-Open-Source-Bibliotheken zur Visualisierung raumbezogener Sachdaten aus Datenbanken. Im Projektverlauf konkretisierte sich diese Fragestellung dahingehend, ob eine auf SQLite, SpatiaLite und Python basierende Open-Source-Lösung in der Lage ist, die im Rahmen der SQL-Übungen erarbeiteten fachlichen und räumlichen Aufgaben funktional gleichwertig zu reproduzieren.
 

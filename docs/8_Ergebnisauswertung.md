@@ -2,7 +2,7 @@
 
 [◀ 7.2 Testergebnisse](72_Testergebnisse.md)
 
-# Ergebnisauswertung
+# 8 Ergebnisauswertung
 
 Die durchgeführten Testfälle zeigen, dass die Zielumgebung (SQLite in Kombination mit SpatiaLite und Python) die zuvor definierten funktionalen Anforderungen erfüllt. Die Tests bilden jedoch ausschließlich einen Funktionsnachweis.
 
